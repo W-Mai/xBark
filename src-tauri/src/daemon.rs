@@ -3,7 +3,6 @@
 
 use anyhow::Result;
 use std::sync::Arc;
-use tauri::Manager;
 
 use crate::config::Config;
 use crate::discovery::Discovery;
@@ -93,7 +92,7 @@ pub fn run(port_override: Option<u16>) -> Result<()> {
         .invoke_handler(tauri::generate_handler![frontend_ready])
         .setup(move |app| {
             // Create overlay window
-            if let Err(e) = overlay::create_overlay(&app.handle()) {
+            if let Err(e) = overlay::create_overlay(app.handle()) {
                 tracing::error!("failed to create overlay: {}", e);
                 return Err(e.into());
             }

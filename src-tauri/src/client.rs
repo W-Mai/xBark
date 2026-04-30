@@ -546,7 +546,7 @@ pub fn list(filter: Option<String>, lang: String, detail: bool) -> Result<()> {
 pub fn autostart(action: AutostartAction) -> Result<()> {
     #[cfg(target_os = "macos")]
     {
-        return autostart_macos(action);
+        autostart_macos(action)
     }
     #[cfg(not(target_os = "macos"))]
     {
@@ -661,7 +661,7 @@ pub fn welcome() -> Result<()> {
     println!("     any script — or embed :sticker[keyword]: in AI replies.");
     println!();
 
-    let was_running = matches!(read_port(), Some(_));
+    let was_running = read_port().is_some();
     if !was_running {
         println!("  → starting daemon for the first time…");
     }

@@ -206,6 +206,7 @@ impl Resolver {
         Ok(count)
     }
 
+    #[allow(dead_code)]
     pub fn sticker_dir(&self) -> &Path {
         &self.sticker_dir
     }

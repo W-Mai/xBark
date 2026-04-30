@@ -186,14 +186,6 @@ pub fn create_overlay(app: &AppHandle) -> Result<()> {
         tracing::info!("open_devtools() called");
     }
 
-    // macOS: set to floating + join all spaces so it shows on fullscreen apps too
-    #[cfg(target_os = "macos")]
-    {
-        use tauri::utils::config::WindowEffectsConfig;
-        let _ = window; // placeholder for future macOS-specific calls
-                        // The macos-private-api feature gives us the cocoa window if needed later
-    }
-
     tracing::info!("overlay window created");
     Ok(())
 }
