@@ -67,6 +67,13 @@ enum Command {
         /// Filter by keyword (matches filename/aiName/tag/description)
         #[arg(long)]
         filter: Option<String>,
+        /// Language preference for displayed fields.
+        /// Defaults to "auto" which picks zh for zh* locales, en otherwise.
+        #[arg(long, default_value = "auto")]
+        lang: String,
+        /// Show the description column (hidden by default for a compact view)
+        #[arg(long)]
+        detail: bool,
     },
     /// Manage launchd autostart (macOS only)
     Autostart {
@@ -105,7 +112,11 @@ fn main() -> Result<()> {
         Command::Status => client::status(),
         Command::Stop => client::stop(),
         Command::Clear => client::clear(),
-        Command::List { filter } => client::list(filter),
+        Command::List {
+            filter,
+            lang,
+            detail,
+        } => client::list(filter, lang, detail),
         Command::Autostart { action } => client::autostart(action),
     }
 }

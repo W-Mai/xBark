@@ -198,7 +198,149 @@ pub fn clear() -> Result<()> {
     Ok(())
 }
 
-pub fn list(filter: Option<String>) -> Result<()> {
+/// Resolved display language preference.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+enum Lang {
+    Zh,
+    En,
+    Both,
+}
+
+/// Resolve `--lang` argument, with `auto` falling back to locale detection.
+///
+/// We peek at LC_ALL / LC_MESSAGES / LANG env vars and treat anything that
+/// starts with `zh` (e.g. `zh_CN.UTF-8`, `zh-Hans`) as Chinese. Otherwise
+/// default to English.
+fn resolve_lang(arg: &str) -> Lang {
+    match arg {
+        "zh" => Lang::Zh,
+        "en" => Lang::En,
+        "both" => Lang::Both,
+        "auto" | "" => {
+            let locale = std::env::var("LC_ALL")
+                .or_else(|_| std::env::var("LC_MESSAGES"))
+                .or_else(|_| std::env::var("LANG"))
+                .unwrap_or_default()
+                .to_lowercase();
+            if locale.starts_with("zh") {
+                Lang::Zh
+            } else {
+                Lang::En
+            }
+        }
+        other => {
+            eprintln!(
+                "warning: unknown --lang value '{}', falling back to auto",
+                other
+            );
+            resolve_lang("auto")
+        }
+    }
+}
+
+/// Measured display width of a string, counting CJK characters as 2 columns
+/// (the same convention most monospace terminals use for rendering).
+fn display_width(s: &str) -> usize {
+    s.chars().fold(0usize, |acc, c| {
+        acc + if is_wide_char(c) { 2 } else { 1 }
+    })
+}
+
+/// East Asian Wide / Fullwidth approximation — good enough for sticker
+/// descriptions and tags without pulling in a whole unicode-width crate.
+fn is_wide_char(c: char) -> bool {
+    matches!(c as u32,
+        0x1100..=0x115F |        // Hangul Jamo
+        0x2E80..=0x303E |        // CJK Radicals, Kangxi
+        0x3041..=0x33FF |        // Hiragana, Katakana, CJK
+        0x3400..=0x4DBF |        // CJK Unified Ideographs Ext A
+        0x4E00..=0x9FFF |        // CJK Unified Ideographs
+        0xA000..=0xA4CF |        // Yi
+        0xAC00..=0xD7A3 |        // Hangul Syllables
+        0xF900..=0xFAFF |        // CJK Compatibility Ideographs
+        0xFE30..=0xFE4F |        // CJK Compatibility Forms
+        0xFF00..=0xFF60 |        // Fullwidth ASCII
+        0xFFE0..=0xFFE6 |        // Fullwidth signs
+        0x20000..=0x2FFFD |      // CJK Ext B–F
+        0x30000..=0x3FFFD        // CJK Ext G
+    )
+}
+
+/// Pad `s` on the right with spaces so its display width is `width`.
+/// If `s` is already wider, we truncate with a single-column ellipsis.
+fn pad_right(s: &str, width: usize) -> String {
+    let w = display_width(s);
+    if w <= width {
+        let mut out = s.to_string();
+        out.push_str(&" ".repeat(width - w));
+        out
+    } else {
+        // truncate, leaving room for ellipsis
+        let target = width.saturating_sub(1);
+        let mut acc = 0usize;
+        let mut out = String::new();
+        for c in s.chars() {
+            let cw = if is_wide_char(c) { 2 } else { 1 };
+            if acc + cw > target {
+                break;
+            }
+            out.push(c);
+            acc += cw;
+        }
+        while display_width(&out) < target {
+            out.push(' ');
+        }
+        out.push('…');
+        out
+    }
+}
+
+/// Truncate `s` to display width `width` (with trailing ellipsis if cut).
+fn truncate_width(s: &str, width: usize) -> String {
+    if display_width(s) <= width {
+        return s.to_string();
+    }
+    let target = width.saturating_sub(1);
+    let mut acc = 0usize;
+    let mut out = String::new();
+    for c in s.chars() {
+        let cw = if is_wide_char(c) { 2 } else { 1 };
+        if acc + cw > target {
+            break;
+        }
+        out.push(c);
+        acc += cw;
+    }
+    out.push('…');
+    out
+}
+
+/// Current terminal width in columns. Falls back to 120 if unknown.
+fn terminal_width() -> usize {
+    // $COLUMNS is set by shells that care; honour it first
+    if let Ok(s) = std::env::var("COLUMNS") {
+        if let Ok(n) = s.parse::<usize>() {
+            if n > 0 {
+                return n;
+            }
+        }
+    }
+    // fallback via tput if it's available
+    if let Ok(out) = std::process::Command::new("tput").arg("cols").output() {
+        if out.status.success() {
+            if let Ok(s) = std::str::from_utf8(&out.stdout) {
+                if let Ok(n) = s.trim().parse::<usize>() {
+                    if n > 0 {
+                        return n;
+                    }
+                }
+            }
+        }
+    }
+    120
+}
+
+pub fn list(filter: Option<String>, lang: String, detail: bool) -> Result<()> {
     ensure_daemon_running()?;
     let path = match filter {
         Some(f) => format!("/stickers?filter={}", urlencoding::encode(&f)),
@@ -206,14 +348,156 @@ pub fn list(filter: Option<String>) -> Result<()> {
     };
     let resp = rt().block_on(http_get(&path))?;
     let items = resp["items"].as_array().cloned().unwrap_or_default();
-    for m in items {
-        println!(
-            "{:<40}  {:<30}  {}",
-            m["filename"].as_str().unwrap_or(""),
-            m["aiName"].as_str().unwrap_or(""),
-            m["description"].as_str().unwrap_or(""),
-        );
+
+    if items.is_empty() {
+        println!("(no stickers found)");
+        return Ok(());
     }
+
+    let lang = resolve_lang(&lang);
+
+    // Extract rows: each row is a set of strings per column (filename, ai, tags, desc).
+    struct Row {
+        filename: String,
+        ainame: String,
+        tags: String,
+        description: String,
+    }
+
+    fn pick(m: &serde_json::Value, field: &str, lang: Lang) -> String {
+        let v = &m[field];
+        // May be a bare string (old format), an {en, zh} object, or missing
+        if let Some(s) = v.as_str() {
+            return s.to_string();
+        }
+        let en = v["en"].as_str().unwrap_or("").to_string();
+        let zh = v["zh"].as_str().unwrap_or("").to_string();
+        match lang {
+            Lang::Zh => if !zh.is_empty() { zh } else { en },
+            Lang::En => if !en.is_empty() { en } else { zh },
+            Lang::Both => {
+                if !en.is_empty() && !zh.is_empty() {
+                    format!("{} / {}", en, zh)
+                } else if !en.is_empty() {
+                    en
+                } else {
+                    zh
+                }
+            }
+        }
+    }
+
+    fn pick_tags(m: &serde_json::Value, lang: Lang) -> String {
+        let v = &m["tags"];
+        // Bare array?
+        if let Some(arr) = v.as_array() {
+            return arr
+                .iter()
+                .filter_map(|x| x.as_str())
+                .collect::<Vec<_>>()
+                .join(",");
+        }
+        let en: Vec<&str> = v["en"].as_array().map(|a| {
+            a.iter().filter_map(|x| x.as_str()).collect()
+        }).unwrap_or_default();
+        let zh: Vec<&str> = v["zh"].as_array().map(|a| {
+            a.iter().filter_map(|x| x.as_str()).collect()
+        }).unwrap_or_default();
+        let picked: Vec<&str> = match lang {
+            Lang::Zh => if !zh.is_empty() { zh } else { en },
+            Lang::En => if !en.is_empty() { en } else { zh },
+            Lang::Both => {
+                let mut v = en.clone();
+                v.extend(zh.iter());
+                v
+            }
+        };
+        picked.join(",")
+    }
+
+    let rows: Vec<Row> = items
+        .iter()
+        .map(|m| Row {
+            filename: m["filename"].as_str().unwrap_or("").to_string(),
+            ainame: pick(m, "aiName", lang),
+            tags: pick_tags(m, lang),
+            description: pick(m, "description", lang),
+        })
+        .collect();
+
+    // Compute column widths, capped per terminal width.
+    let total_width = terminal_width();
+    // Max raw widths
+    let max_fn = rows.iter().map(|r| display_width(&r.filename)).max().unwrap_or(0);
+    let max_ai = rows.iter().map(|r| display_width(&r.ainame)).max().unwrap_or(0);
+    let max_tags = rows.iter().map(|r| display_width(&r.tags)).max().unwrap_or(0);
+
+    // Hard cap per column to keep the table usable on normal terminals.
+    let col_fn = max_fn.min(46);
+    let col_ai = max_ai.min(28);
+    let col_tags = max_tags.min(42);
+
+    // Spacing: 2 spaces between columns.
+    let spacer = "  ";
+    let fixed_width = col_fn + spacer.len() + col_ai + spacer.len() + col_tags;
+    let col_desc = if detail {
+        total_width.saturating_sub(fixed_width + spacer.len()).max(20)
+    } else {
+        0
+    };
+
+    // Header
+    let mut header = String::new();
+    header.push_str(&pad_right("FILENAME", col_fn));
+    header.push_str(spacer);
+    header.push_str(&pad_right("AINAME", col_ai));
+    header.push_str(spacer);
+    header.push_str(&pad_right("TAGS", col_tags));
+    if detail {
+        header.push_str(spacer);
+        header.push_str("DESCRIPTION");
+    }
+    println!("\x1b[1m{}\x1b[0m", header);
+
+    // Separator
+    let mut sep = String::new();
+    sep.push_str(&"─".repeat(col_fn));
+    sep.push_str(spacer);
+    sep.push_str(&"─".repeat(col_ai));
+    sep.push_str(spacer);
+    sep.push_str(&"─".repeat(col_tags));
+    if detail {
+        sep.push_str(spacer);
+        sep.push_str(&"─".repeat(col_desc));
+    }
+    println!("\x1b[2m{}\x1b[0m", sep);
+
+    // Rows
+    for r in &rows {
+        let mut line = String::new();
+        line.push_str(&pad_right(&r.filename, col_fn));
+        line.push_str(spacer);
+        line.push_str(&pad_right(&r.ainame, col_ai));
+        line.push_str(spacer);
+        line.push_str(&pad_right(&r.tags, col_tags));
+        if detail && col_desc > 0 {
+            line.push_str(spacer);
+            line.push_str(&truncate_width(&r.description, col_desc));
+        }
+        println!("{}", line);
+    }
+
+    println!();
+    let mode = match lang {
+        Lang::Zh => "zh",
+        Lang::En => "en",
+        Lang::Both => "both",
+    };
+    println!(
+        "\x1b[2m{} stickers · lang={} · tip: --lang <zh|en|both>, --detail for descriptions\x1b[0m",
+        rows.len(),
+        mode
+    );
     Ok(())
 }
 
