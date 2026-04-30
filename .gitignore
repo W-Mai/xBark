@@ -19,3 +19,4 @@ src-tauri/gen/
 
 # Node (not used but future-proof)
 node_modules/
+.local/
