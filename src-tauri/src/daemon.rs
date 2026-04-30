@@ -56,7 +56,10 @@ pub fn run(port_override: Option<u16>) -> Result<()> {
             tracing::info!("unpacked bundled sticker pack to {:?}", user_sticker_dir);
         }
         Ok(crate::assets::UnpackOutcome::AlreadyCurrent) => {
-            tracing::debug!("bundled sticker pack already current at {:?}", user_sticker_dir);
+            tracing::debug!(
+                "bundled sticker pack already current at {:?}",
+                user_sticker_dir
+            );
         }
         Ok(crate::assets::UnpackOutcome::UserOwnedSkipped) => {
             tracing::info!(
@@ -117,10 +120,7 @@ pub fn run(port_override: Option<u16>) -> Result<()> {
                     match server::serve(state, desired_port_for_app).await {
                         Ok(port) => {
                             // Write port file for client discovery
-                            let _ = std::fs::write(
-                                cd.join(PORT_FILE_NAME),
-                                port.to_string(),
-                            );
+                            let _ = std::fs::write(cd.join(PORT_FILE_NAME), port.to_string());
                             // Publish mDNS
                             match Discovery::publish(port) {
                                 Ok(_disc) => {

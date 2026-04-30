@@ -169,8 +169,7 @@ pub struct Resolver {
 fn tokens(s: &str) -> Vec<String> {
     s.to_lowercase()
         .split(|c: char| {
-            c.is_whitespace()
-                || matches!(c, '-' | '_' | '/' | ',' | '.' | ':' | ';' | '\'' | '"')
+            c.is_whitespace() || matches!(c, '-' | '_' | '/' | ',' | '.' | ':' | ';' | '\'' | '"')
         })
         .filter(|t| !t.is_empty())
         .map(|s| s.to_string())
@@ -197,10 +196,10 @@ impl Resolver {
             tracing::warn!("_meta.json not found at {:?}", meta_path);
             return Ok(0);
         }
-        let text = fs::read_to_string(&meta_path)
-            .with_context(|| format!("read {:?}", meta_path))?;
-        let parsed: HashMap<String, StickerMeta> = serde_json::from_str(&text)
-            .with_context(|| format!("parse {:?}", meta_path))?;
+        let text =
+            fs::read_to_string(&meta_path).with_context(|| format!("read {:?}", meta_path))?;
+        let parsed: HashMap<String, StickerMeta> =
+            serde_json::from_str(&text).with_context(|| format!("parse {:?}", meta_path))?;
         let count = parsed.len();
         *self.meta.write().unwrap() = parsed;
         tracing::info!("loaded {} stickers from {:?}", count, meta_path);
@@ -229,9 +228,7 @@ impl Resolver {
             .map(|m| (score_sticker(m, keyword, &kw_lc, &kw_tokens), m))
             .filter(|(s, _)| *s > 0)
             .collect();
-        scored.sort_by(|a, b| {
-            b.0.cmp(&a.0).then_with(|| a.1.filename.cmp(&b.1.filename))
-        });
+        scored.sort_by(|a, b| b.0.cmp(&a.0).then_with(|| a.1.filename.cmp(&b.1.filename)));
 
         if let Some(first) = scored.first() {
             best = Some((first.0, first.1));
@@ -343,12 +340,12 @@ fn score_sticker(m: &StickerMeta, keyword: &str, kw_lc: &str, kw_tokens: &[Strin
 
     // 8. Partial token coverage across tags (en-side mostly)
     if !kw_tokens.is_empty() {
-        let all_tag_tokens: Vec<String> = tags_all
-            .iter()
-            .flat_map(|t| tokens(t))
-            .collect();
+        let all_tag_tokens: Vec<String> = tags_all.iter().flat_map(|t| tokens(t)).collect();
         if !all_tag_tokens.is_empty() {
-            let hits = kw_tokens.iter().filter(|t| all_tag_tokens.contains(*t)).count();
+            let hits = kw_tokens
+                .iter()
+                .filter(|t| all_tag_tokens.contains(*t))
+                .count();
             if hits > 0 {
                 let ratio = hits as f32 / kw_tokens.len() as f32;
                 let partial_score = (ratio * 25.0) as i32;
@@ -373,11 +370,25 @@ fn score_sticker(m: &StickerMeta, keyword: &str, kw_lc: &str, kw_tokens: &[Strin
 mod tests {
     use super::*;
 
-    fn sticker(name: &str, ai_en: &str, ai_zh: &str, desc_en: &str, desc_zh: &str, tags_en: &[&str], tags_zh: &[&str]) -> StickerMeta {
+    fn sticker(
+        name: &str,
+        ai_en: &str,
+        ai_zh: &str,
+        desc_en: &str,
+        desc_zh: &str,
+        tags_en: &[&str],
+        tags_zh: &[&str],
+    ) -> StickerMeta {
         StickerMeta {
             filename: format!("{}.jpg", name),
-            ai_name: EnBias(Bilingual::Pair { en: ai_en.into(), zh: ai_zh.into() }),
-            description: ZhBias(Bilingual::Pair { en: desc_en.into(), zh: desc_zh.into() }),
+            ai_name: EnBias(Bilingual::Pair {
+                en: ai_en.into(),
+                zh: ai_zh.into(),
+            }),
+            description: ZhBias(Bilingual::Pair {
+                en: desc_en.into(),
+                zh: desc_zh.into(),
+            }),
             tags: BilingualTags::Pair {
                 en: tags_en.iter().map(|s| s.to_string()).collect(),
                 zh: tags_zh.iter().map(|s| s.to_string()).collect(),
@@ -402,7 +413,15 @@ mod tests {
 
     #[test]
     fn exact_ai_name() {
-        let r = make_resolver(sticker("x", "smiling-man-thumbs-up", "竖大拇指", "", "", &[], &[]));
+        let r = make_resolver(sticker(
+            "x",
+            "smiling-man-thumbs-up",
+            "竖大拇指",
+            "",
+            "",
+            &[],
+            &[],
+        ));
         assert!(r.resolve("smiling-man-thumbs-up").is_some());
         assert!(r.resolve("竖大拇指").is_some());
     }

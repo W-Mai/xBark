@@ -52,7 +52,10 @@ pub fn mark_frontend_ready(app: &AppHandle) {
         std::mem::take(&mut *q)
     };
     if !pending.is_empty() {
-        tracing::info!("frontend ready — flushing {} pending stickers", pending.len());
+        tracing::info!(
+            "frontend ready — flushing {} pending stickers",
+            pending.len()
+        );
     } else {
         tracing::info!("frontend ready");
     }
@@ -91,8 +94,10 @@ pub fn create_overlay(app: &AppHandle) -> Result<()> {
             "  monitor[{}] name={:?} pos=({},{})px size={}x{}px scale={}",
             i,
             m.name(),
-            m.position().x, m.position().y,
-            m.size().width, m.size().height,
+            m.position().x,
+            m.position().y,
+            m.size().width,
+            m.size().height,
             m.scale_factor(),
         );
     }
@@ -104,8 +109,10 @@ pub fn create_overlay(app: &AppHandle) -> Result<()> {
     tracing::info!(
         "primary_monitor name={:?} pos=({},{})px size={}x{}px scale={}",
         monitor.name(),
-        monitor.position().x, monitor.position().y,
-        monitor.size().width, monitor.size().height,
+        monitor.position().x,
+        monitor.position().y,
+        monitor.size().width,
+        monitor.size().height,
         monitor.scale_factor(),
     );
 
@@ -127,22 +134,22 @@ pub fn create_overlay(app: &AppHandle) -> Result<()> {
     let overlay_y = screen_y_pt + screen_h_pt - overlay_h;
     tracing::info!(
         "overlay region: {}x{}pt at ({},{})pt on primary screen",
-        overlay_w, overlay_h, overlay_x, overlay_y
+        overlay_w,
+        overlay_h,
+        overlay_x,
+        overlay_y
     );
 
-    let mut builder = WebviewWindowBuilder::new(
-        app,
-        OVERLAY_LABEL,
-        WebviewUrl::App("index.html".into()),
-    )
-    .title("xBark Overlay")
-    .decorations(false)
-    .always_on_top(true)
-    .visible_on_all_workspaces(true)  // follow user across macOS Spaces
-    .skip_taskbar(true)
-    .resizable(false)
-    .focused(false)
-    .shadow(false);
+    let mut builder =
+        WebviewWindowBuilder::new(app, OVERLAY_LABEL, WebviewUrl::App("index.html".into()))
+            .title("xBark Overlay")
+            .decorations(false)
+            .always_on_top(true)
+            .visible_on_all_workspaces(true) // follow user across macOS Spaces
+            .skip_taskbar(true)
+            .resizable(false)
+            .focused(false)
+            .shadow(false);
 
     if debug_mode {
         builder = builder
@@ -160,7 +167,10 @@ pub fn create_overlay(app: &AppHandle) -> Result<()> {
             .position(overlay_x, overlay_y);
         tracing::info!(
             "overlay region: {}x{} at ({},{})",
-            overlay_w, overlay_h, overlay_x, overlay_y
+            overlay_w,
+            overlay_h,
+            overlay_x,
+            overlay_y
         );
     }
 

@@ -72,11 +72,7 @@ impl Config {
     pub fn config_dir() -> PathBuf {
         ProjectDirs::from("sh", "w-mai", "xbark")
             .map(|d| d.config_dir().to_path_buf())
-            .unwrap_or_else(|| {
-                dirs_home()
-                    .join(".config")
-                    .join("xbark")
-            })
+            .unwrap_or_else(|| dirs_home().join(".config").join("xbark"))
     }
 
     pub fn config_path() -> PathBuf {

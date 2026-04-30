@@ -188,7 +188,10 @@ pub fn stop() -> Result<()> {
             return Ok(());
         }
     }
-    println!("daemon still running after SIGTERM, check manually (pid {})", pid);
+    println!(
+        "daemon still running after SIGTERM, check manually (pid {})",
+        pid
+    );
     Ok(())
 }
 
@@ -241,9 +244,8 @@ fn resolve_lang(arg: &str) -> Lang {
 /// Measured display width of a string, counting CJK characters as 2 columns
 /// (the same convention most monospace terminals use for rendering).
 fn display_width(s: &str) -> usize {
-    s.chars().fold(0usize, |acc, c| {
-        acc + if is_wide_char(c) { 2 } else { 1 }
-    })
+    s.chars()
+        .fold(0usize, |acc, c| acc + if is_wide_char(c) { 2 } else { 1 })
 }
 
 /// East Asian Wide / Fullwidth approximation — good enough for sticker
@@ -373,8 +375,20 @@ pub fn list(filter: Option<String>, lang: String, detail: bool) -> Result<()> {
         let en = v["en"].as_str().unwrap_or("").to_string();
         let zh = v["zh"].as_str().unwrap_or("").to_string();
         match lang {
-            Lang::Zh => if !zh.is_empty() { zh } else { en },
-            Lang::En => if !en.is_empty() { en } else { zh },
+            Lang::Zh => {
+                if !zh.is_empty() {
+                    zh
+                } else {
+                    en
+                }
+            }
+            Lang::En => {
+                if !en.is_empty() {
+                    en
+                } else {
+                    zh
+                }
+            }
             Lang::Both => {
                 if !en.is_empty() && !zh.is_empty() {
                     format!("{} / {}", en, zh)
@@ -397,15 +411,29 @@ pub fn list(filter: Option<String>, lang: String, detail: bool) -> Result<()> {
                 .collect::<Vec<_>>()
                 .join(",");
         }
-        let en: Vec<&str> = v["en"].as_array().map(|a| {
-            a.iter().filter_map(|x| x.as_str()).collect()
-        }).unwrap_or_default();
-        let zh: Vec<&str> = v["zh"].as_array().map(|a| {
-            a.iter().filter_map(|x| x.as_str()).collect()
-        }).unwrap_or_default();
+        let en: Vec<&str> = v["en"]
+            .as_array()
+            .map(|a| a.iter().filter_map(|x| x.as_str()).collect())
+            .unwrap_or_default();
+        let zh: Vec<&str> = v["zh"]
+            .as_array()
+            .map(|a| a.iter().filter_map(|x| x.as_str()).collect())
+            .unwrap_or_default();
         let picked: Vec<&str> = match lang {
-            Lang::Zh => if !zh.is_empty() { zh } else { en },
-            Lang::En => if !en.is_empty() { en } else { zh },
+            Lang::Zh => {
+                if !zh.is_empty() {
+                    zh
+                } else {
+                    en
+                }
+            }
+            Lang::En => {
+                if !en.is_empty() {
+                    en
+                } else {
+                    zh
+                }
+            }
             Lang::Both => {
                 let mut v = en.clone();
                 v.extend(zh.iter());
@@ -428,9 +456,21 @@ pub fn list(filter: Option<String>, lang: String, detail: bool) -> Result<()> {
     // Compute column widths, capped per terminal width.
     let total_width = terminal_width();
     // Max raw widths
-    let max_fn = rows.iter().map(|r| display_width(&r.filename)).max().unwrap_or(0);
-    let max_ai = rows.iter().map(|r| display_width(&r.ainame)).max().unwrap_or(0);
-    let max_tags = rows.iter().map(|r| display_width(&r.tags)).max().unwrap_or(0);
+    let max_fn = rows
+        .iter()
+        .map(|r| display_width(&r.filename))
+        .max()
+        .unwrap_or(0);
+    let max_ai = rows
+        .iter()
+        .map(|r| display_width(&r.ainame))
+        .max()
+        .unwrap_or(0);
+    let max_tags = rows
+        .iter()
+        .map(|r| display_width(&r.tags))
+        .max()
+        .unwrap_or(0);
 
     // Hard cap per column to keep the table usable on normal terminals.
     let col_fn = max_fn.min(46);
@@ -441,7 +481,9 @@ pub fn list(filter: Option<String>, lang: String, detail: bool) -> Result<()> {
     let spacer = "  ";
     let fixed_width = col_fn + spacer.len() + col_ai + spacer.len() + col_tags;
     let col_desc = if detail {
-        total_width.saturating_sub(fixed_width + spacer.len()).max(20)
+        total_width
+            .saturating_sub(fixed_width + spacer.len())
+            .max(20)
     } else {
         0
     };

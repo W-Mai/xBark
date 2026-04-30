@@ -165,7 +165,10 @@ fn rewrite_tauri_conf_version(path: &str, next: &str) -> Result {
 fn bump_semver(version: &str, level: &str) -> Result<String> {
     let parts: Vec<u64> = version
         .split('.')
-        .map(|p| p.parse::<u64>().map_err(|e| format!("invalid version: {e}")))
+        .map(|p| {
+            p.parse::<u64>()
+                .map_err(|e| format!("invalid version: {e}"))
+        })
         .collect::<std::result::Result<_, _>>()?;
     if parts.len() != 3 {
         return Err(format!("expected semver x.y.z, got {version}").into());
