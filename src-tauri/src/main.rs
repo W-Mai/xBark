@@ -4,6 +4,7 @@
 use anyhow::Result;
 use clap::{Parser, Subcommand};
 
+mod assets;
 mod cli_types;
 mod client;
 mod config;

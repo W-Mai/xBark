@@ -47,6 +47,31 @@ pub fn run(port_override: Option<u16>) -> Result<()> {
         let _ = std::fs::remove_file(config_dir_for_cleanup.join(PORT_FILE_NAME));
     });
 
+    // If the user hasn't provided a sticker pack (common on first install),
+    // materialise the bundled pack into ~/.config/xbark/stickers/ so the
+    // daemon has something to show out of the box.
+    let user_sticker_dir = Config::config_dir().join("stickers");
+    match crate::assets::ensure_unpacked(&user_sticker_dir) {
+        Ok(crate::assets::UnpackOutcome::Unpacked) => {
+            tracing::info!("unpacked bundled sticker pack to {:?}", user_sticker_dir);
+        }
+        Ok(crate::assets::UnpackOutcome::AlreadyCurrent) => {
+            tracing::debug!("bundled sticker pack already current at {:?}", user_sticker_dir);
+        }
+        Ok(crate::assets::UnpackOutcome::UserOwnedSkipped) => {
+            tracing::info!(
+                "user-managed sticker dir at {:?}, leaving alone",
+                user_sticker_dir
+            );
+        }
+        Ok(crate::assets::UnpackOutcome::NoBundle) => {
+            tracing::warn!("this xbark binary was built without a bundled sticker pack");
+        }
+        Err(e) => {
+            tracing::warn!("could not unpack bundled sticker pack: {}", e);
+        }
+    }
+
     // Resolver — load stickers up front
     let sticker_dir = config.resolve_sticker_dir();
     let resolver = Arc::new(Resolver::new(sticker_dir.clone()));
