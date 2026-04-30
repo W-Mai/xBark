@@ -1,928 +1,2265 @@
 {
-  "getimgdata-8.jpg": {
-    "filename": "getimgdata-8.jpg",
-    "aiName": "smiling-man-thumbs-up",
-    "description": "男子面带笑容竖起大拇指，既可以用来表达赞许与肯定，也常用来调侃面对离谱事情时无奈、强颜欢笑接受的情绪",
-    "tags": [
-      "点赞",
-      "认可",
-      "无奈",
-      "微笑"
-    ]
-  },
-  "getimgdata-13.jpg": {
-    "filename": "getimgdata-13.jpg",
-    "aiName": "ye-shi-la-shout",
-    "description": "这是经典鬼畜梗表情包，用来表达愤怒不满的情绪，适合怼人吐槽或是玩梗调侃",
-    "tags": [
-      "鬼畜梗",
-      "怼人",
-      "搞笑",
-      "玩梗"
-    ]
-  },
-  "v2_cf77560f-c19f-41ae-84e9-9e580bf131dl.gif": {
-    "filename": "v2_cf77560f-c19f-41ae-84e9-9e580bf131dl.gif",
-    "aiName": "blue-frog-blank-stare",
-    "description": "呈现出放空发呆、面无表情的平淡状态，可用来表达无语、发呆摸鱼或者没有情绪的心情",
-    "tags": [
-      "发呆",
-      "面无表情",
-      "可爱卡通",
-      "无语"
-    ]
-  },
-  "v2_743a5aa2-4263-473b-b37d-d7206bf8deal.gif": {
-    "filename": "v2_743a5aa2-4263-473b-b37d-d7206bf8deal.gif",
-    "aiName": "cute-blue-cat-smile",
-    "description": "软萌的蓝色小猫带着淡淡微笑，传递出愉悦满足、平和放松的好心情",
-    "tags": [
-      "可爱",
-      "微笑",
-      "治愈",
-      "开心"
-    ]
-  },
-  "getimgdata-12.jpg": {
-    "filename": "getimgdata-12.jpg",
-    "aiName": "confused-boy-question-marks",
-    "description": "表达一脸茫然疑惑的状态，对看到或听到的事物感到摸不着头脑，充满疑问",
-    "tags": [
-      "疑惑",
-      "问号",
-      "懵圈",
-      "疑问"
-    ]
-  },
-  "getimgdata-9.jpg": {
-    "filename": "getimgdata-9.jpg",
-    "aiName": "blurry-confused-guy",
-    "description": "模糊的人物歪着脑袋，一脸茫然搞不清状况，表达疑惑不解、摸不着头脑的懵圈状态",
-    "tags": [
-      "一脸懵",
-      "疑惑",
-      "迷茫",
-      "不解"
-    ]
-  },
-  "v2_cc91a343-c1d3-489f-b151-3d63f947e70l.gif": {
-    "filename": "v2_cc91a343-c1d3-489f-b151-3d63f947e70l.gif",
-    "aiName": "shocked-frizzy-blue-cat",
-    "description": "表现了遭遇意外后极度震惊，整个人都吓得炸毛、目瞪口呆的惊愕情绪，可用于表达遇到出乎意料事件时的反应",
-    "tags": [
-      "震惊",
-      "炸毛",
-      "惊吓",
-      "惊愕"
-    ]
-  },
-  "v2_a1e88cc2-2be5-4d93-9cb9-921622ba09dl.gif": {
-    "filename": "v2_a1e88cc2-2be5-4d93-9cb9-921622ba09dl.gif",
-    "aiName": "blue-cat-skeptical-stare",
-    "description": "表达对他人说法或行为的质疑、不满与不屑，传递出疑惑不服的情绪",
-    "tags": [
-      "质疑",
-      "不满",
-      "斜眼",
-      "猫猫",
-      "不屑"
-    ]
-  },
-  "getimgdata-10.jpg": {
-    "filename": "getimgdata-10.jpg",
-    "aiName": "grumpy-guy-f-word",
-    "description": "表达遇到糟心离谱的事情时，烦躁无语、忍不住想要爆粗发泄的情绪",
-    "tags": [
-      "烦躁",
-      "无语",
-      "吐槽",
-      "爆粗"
-    ]
-  },
-  "v2_1ccf6c16-5d04-4d84-af75-178d4291ffbl.gif": {
-    "filename": "v2_1ccf6c16-5d04-4d84-af75-178d4291ffbl.gif",
-    "aiName": "glowing-shocked-blue-cat",
-    "description": "蓝色小猫浑身发光，表情惊恐震惊，用来表达遇到意外事件后极度震惊、不敢相信的情绪",
-    "tags": [
-      "惊恐",
-      "震惊",
-      "发光",
-      "蓝猫",
-      "不敢相信"
-    ]
-  },
-  "v2_9e96d7cd-c2a9-4b9f-b51b-1dafc8ea940l.gif": {
-    "filename": "v2_9e96d7cd-c2a9-4b9f-b51b-1dafc8ea940l.gif",
-    "aiName": "shocked-trembling-blue-cat",
-    "description": "蓝色猫咪大张着嘴浑身颤抖，用来表达遇到出乎意料的事情时极度震惊、难以置信的情绪",
-    "tags": [
-      "震惊",
-      "发抖",
-      "难以置信",
-      "惊讶"
-    ]
-  },
-  "v2_f29d5906-c04a-42a7-a2b8-90dc0300892l.gif": {
-    "filename": "v2_f29d5906-c04a-42a7-a2b8-90dc0300892l.gif",
-    "aiName": "blue-confused-cat",
-    "description": "圆乎乎的浅蓝色小猫嘴角下撇，一脸茫然疑惑，用来表达不知所措、摸不着头脑的情绪",
-    "tags": [
-      "茫然",
-      "困惑",
-      "不知所措",
-      "可爱猫猫"
-    ]
-  },
-  "getimgdata-11.jpg": {
-    "filename": "getimgdata-11.jpg",
-    "aiName": "huh-grinning-guy",
-    "description": "面带玩味的笑容发出语气词“噫”，用来表达疑惑、讶异或是调侃玩味的情绪",
-    "tags": [
-      "噫",
-      "疑惑",
-      "调侃",
-      "坏笑"
-    ]
-  },
-  "v2_156e471e-b17c-4fa3-9faf-e2f7489faf2l.gif": {
-    "filename": "v2_156e471e-b17c-4fa3-9faf-e2f7489faf2l.gif",
-    "aiName": "angry-flaming-blue-shark",
-    "description": "可爱的蓝色小鲨头顶熊熊怒火，表现出极度愤怒、怒火中烧的状态，用来抒发自己愤怒不满的情绪",
-    "tags": [
-      "愤怒",
-      "发火",
-      "暴怒",
-      "可爱"
-    ]
-  },
-  "getimgdata-15.jpg": {
-    "filename": "getimgdata-15.jpg",
-    "aiName": "big-problem-panic",
-    "description": "表达遇到大问题后内心慌乱不安，用来调侃情况糟糕、大事不妙的处境",
-    "tags": [
-      "慌乱",
-      "出大事",
-      "调侃",
-      "大事不妙"
-    ]
-  },
-  "v2_71f470db-c772-4c26-8712-5f99d81c6e5l.gif": {
-    "filename": "v2_71f470db-c772-4c26-8712-5f99d81c6e5l.gif",
-    "aiName": "blue-cat-heart-smile",
-    "description": "表现了温柔心动、愉悦满足的情绪，传递出满满的喜爱之情",
-    "tags": [
-      "心动",
-      "可爱",
-      "开心",
-      "治愈"
-    ]
-  },
-  "v2_ef86ee7d-8dfe-4a48-8dd3-c182b7f5426l.gif": {
-    "filename": "v2_ef86ee7d-8dfe-4a48-8dd3-c182b7f5426l.gif",
-    "aiName": "black-pixel-spider",
-    "description": "一只像素风格的黑蜘蛛，用来传递毛骨悚然的恐惧感，多用于恐怖或万圣节相关场景",
-    "tags": [
-      "黑蜘蛛",
-      "恐怖",
-      "万圣节",
-      "像素风"
-    ]
-  },
-  "getimgdata-14.jpg": {
-    "filename": "getimgdata-14.jpg",
-    "aiName": "disgusted-pained-grimace",
-    "description": "脸部紧皱挤出难受的表情，表达对人或事物极度反感恶心、生理上难以接受的不适情绪",
-    "tags": [
-      "极度嫌弃",
-      "生理不适",
-      "恶心反感",
-      "离谱"
-    ]
-  },
-  "getimgdata-16.jpg": {
-    "filename": "getimgdata-16.jpg",
-    "aiName": "blank-speechless-face",
-    "description": "呈现出一脸茫然呆滞的状态，用来表达遇到离谱事情时无语、不知道该说什么的情绪",
-    "tags": [
-      "无语",
-      "呆滞",
-      "茫然",
-      "发呆"
-    ]
-  },
-  "v2_83c4ac63-ad83-4a9b-b401-0c91912fd57l.gif": {
-    "filename": "v2_83c4ac63-ad83-4a9b-b401-0c91912fd57l.gif",
-    "aiName": "full-water-jar",
-    "description": "这是一只装满水的玻璃水罐，用来表达需要补充水分、或是已经备好充足饮用水，也可以指代日常喝水的需求",
-    "tags": [
-      "喝水",
-      "补水",
-      "储水",
-      "水杯"
-    ]
-  },
-  "getimgdata-1.gif": {
-    "filename": "getimgdata-1.gif",
-    "aiName": "cute-cat-reaching-paw",
-    "description": "猫咪抬起爪子伸向镜头，带着好奇与亲昵，仿佛想要触碰屏幕前的你，传递出软萌亲近的感觉，适合用来打招呼",
-    "tags": [
-      "猫咪",
-      "可爱",
-      "伸手",
-      "萌宠",
-      "亲昵"
-    ]
-  },
-  "v2_b142fbb3-70dc-46ef-a023-6bf352cfc3cl.gif": {
-    "filename": "v2_b142fbb3-70dc-46ef-a023-6bf352cfc3cl.gif",
-    "aiName": "happy-smiley-tongue-out",
-    "description": "眯眼微笑吐出舌头，传递开心满足的情绪，常用来表达尝到美食、心情愉悦俏皮的感觉",
-    "tags": [
-      "开心",
-      "满足",
-      "俏皮",
-      "美味"
-    ]
-  },
-  "getimgdata-2.gif": {
-    "filename": "getimgdata-2.gif",
-    "aiName": "red-faced-smirking-dance",
-    "description": "摆出搞怪劈叉姿势，红脸坏笑，通常用来表达做了小坏事之后窃喜得意，或是尴尬又好笑的情绪",
-    "tags": [
-      "搞怪",
-      "坏笑",
-      "窃喜",
-      "沙雕"
-    ]
-  },
-  "v2_007187e4-c5be-4a0d-980d-639959848f0l.gif": {
-    "filename": "v2_007187e4-c5be-4a0d-980d-639959848f0l.gif",
-    "aiName": "wink-kiss-heart",
-    "description": "眨单眼做出飞吻动作送出爱心，用来向对方表达爱意与好感",
-    "tags": [
-      "飞吻",
-      "示爱",
-      "爱心",
-      "亲亲"
-    ]
-  },
-  "v2_e5159385-e82b-4178-b755-7bf6915d951l.gif": {
-    "filename": "v2_e5159385-e82b-4178-b755-7bf6915d951l.gif",
-    "aiName": "shocked-trembling-blue-cat",
-    "description": "该贴纸刻画了蓝色小猫浑身发抖、大汗淋漓、大张嘴受惊的样子，用来表达受到突发惊吓后极度震惊、恐慌不敢相信的情绪",
-    "tags": [
-      "震惊",
-      "惊吓",
-      "发抖",
-      "流汗"
-    ]
-  },
-  "v2_833ed88f-8315-4a5d-aced-dd9512438acl.gif": {
-    "filename": "v2_833ed88f-8315-4a5d-aced-dd9512438acl.gif",
-    "aiName": "blue-cat-proud-thumbs-up",
-    "description": "蓝色猫咪微笑着竖大拇指，表达对他人的称赞与认可，传递肯定、满意的情绪",
-    "tags": [
-      "点赞",
-      "认可",
-      "称赞",
-      "满意"
-    ]
-  },
-  "getimgdata-3.gif": {
-    "filename": "getimgdata-3.gif",
-    "aiName": "confused-grey-sitting-puppy",
-    "description": "灰色小狗歪头张嘴伸爪，一脸茫然困惑，用来表达疑惑不解、摸不着头脑的情绪",
-    "tags": [
-      "疑惑",
-      "小狗",
-      "茫然",
-      "歪头"
-    ]
-  },
-  "v2_8f1f8006-246a-40d5-9f9d-fb73f64291dl.gif": {
-    "filename": "v2_8f1f8006-246a-40d5-9f9d-fb73f64291dl.gif",
-    "aiName": "clapping-hands",
-    "description": "表示鼓掌喝彩，用来表达对他人的赞赏与认可，也可传递祝贺的情绪",
-    "tags": [
-      "鼓掌",
-      "赞赏",
-      "祝贺",
-      "喝彩"
-    ]
-  },
-  "getimgdata-7.gif": {
-    "filename": "getimgdata-7.gif",
-    "aiName": "cute-frog-chin-thinking",
-    "description": "线条绘制的呆萌小青蛙歪头托着下巴，正若有所思地琢磨事情，用来表达自己在思考问题、心存疑惑的状态",
-    "tags": [
-      "思考",
-      "呆萌",
-      "若有所思",
-      "歪头"
-    ]
-  },
-  "v2_1e30d0ea-0645-401a-a20a-c1777a7221dl.gif": {
-    "filename": "v2_1e30d0ea-0645-401a-a20a-c1777a7221dl.gif",
-    "aiName": "worried-blue-face",
-    "description": "该表情传递出担忧焦虑、心灰意冷的情绪，也可以用来形容感到寒冷，遭遇糟心事时心情低落",
-    "tags": [
-      "担忧",
-      "焦虑",
-      "心凉",
-      "低落"
-    ]
-  },
-  "v2_3eac31a1-1fc0-4e04-a1c2-8dff5e54fa5l.gif": {
-    "filename": "v2_3eac31a1-1fc0-4e04-a1c2-8dff5e54fa5l.gif",
-    "aiName": "blue-cat-extreme-shock",
-    "description": "蓝猫浑身颤抖瞪大嘴，表现得知意外消息后极度震惊、大吃一惊、不敢置信的强烈情绪",
-    "tags": [
-      "震惊",
-      "惊讶",
-      "猫咪",
-      "吓一跳"
-    ]
-  },
-  "v2_b5afa055-00eb-4c60-9f4a-3b0cd90a211l.gif": {
-    "filename": "v2_b5afa055-00eb-4c60-9f4a-3b0cd90a211l.gif",
-    "aiName": "monkey-cover-eyes",
-    "description": "猴子双手捂住眼睛偷笑，表达不好意思、羞于直视，或是不想看、逃避某些内容的尴尬情绪",
-    "tags": [
-      "捂眼猴子",
-      "不好意思",
-      "不想看",
-      "尴尬"
-    ]
-  },
-  "v2_16ebaf33-9df0-42c2-aca9-c545c24bb53l.gif": {
-    "filename": "v2_16ebaf33-9df0-42c2-aca9-c545c24bb53l.gif",
-    "aiName": "blue-cat-loving-smile",
-    "description": "软萌的蓝色猫猫带着爱心微笑，传递出对对方满满的喜爱与好感，氛围甜蜜治愈",
-    "tags": [
-      "可爱",
-      "喜爱",
-      "治愈",
-      "卖萌"
-    ]
-  },
-  "v2_bf5d43f5-454a-4f01-808c-3e251cf25f0l.gif": {
-    "filename": "v2_bf5d43f5-454a-4f01-808c-3e251cf25f0l.gif",
-    "aiName": "blue-cat-curled-up",
-    "description": "小猫蜷缩埋起自己，表达想要躲起来、逃避外界，社恐不想面对事情的退缩情绪",
-    "tags": [
-      "蜷缩",
-      "逃避",
-      "社恐",
-      "躲起来"
-    ]
-  },
-  "v2_1b42311c-0c78-4afe-a655-55a2d508a32l.gif": {
-    "filename": "v2_1b42311c-0c78-4afe-a655-55a2d508a32l.gif",
-    "aiName": "heart-eyes-happy-smile",
-    "description": "用来表达看到喜欢的人或事物时，心动欢喜、充满爱慕的愉悦心情",
-    "tags": [
-      "心动",
-      "喜爱",
-      "花痴",
-      "爱心眼"
-    ]
-  },
-  "v2_291c5510-d0eb-4938-8edf-01113ff9f98l.gif": {
-    "filename": "v2_291c5510-d0eb-4938-8edf-01113ff9f98l.gif",
-    "aiName": "decorated-christmas-tree",
-    "description": "装饰满彩球、顶有金星的圣诞树，洋溢着圣诞节日氛围，传递圣诞节的欢乐祝福",
-    "tags": [
-      "圣诞节",
-      "圣诞树",
-      "节日装饰",
-      "圣诞祝福"
-    ]
-  },
-  "getimgdata-6.gif": {
-    "filename": "getimgdata-6.gif",
-    "aiName": "cute-rabbit-stare",
-    "description": "呆萌兔子直勾勾看着前方，传达出无辜、茫然或是等待对方回应的情绪",
-    "tags": [
-      "兔子",
-      "呆萌",
-      "无辜",
-      "注视"
-    ]
-  },
-  "getimgdata-4.gif": {
-    "filename": "getimgdata-4.gif",
-    "aiName": "shocked-thick-lip-orange-cat",
-    "description": "这是经过魔改P图的搞笑表情包，给橘猫加上人类厚嘴唇，露出惊讶疑惑的神情，用来表达震惊、不敢相信或一脸茫然的情绪",
-    "tags": [
-      "搞笑",
-      "惊讶",
-      "疑惑",
-      "橘猫",
-      "表情包"
-    ]
-  },
-  "v2_2c522092-d4b4-4107-9941-b4c799eb09bl.gif": {
-    "filename": "v2_2c522092-d4b4-4107-9941-b4c799eb09bl.gif",
-    "aiName": "hungry-blue-cat-gimme-food",
-    "description": "圆滚滚的蓝色猫咪饿饿地摆手，表达肚子饿了想吃东西、求投喂的情绪",
-    "tags": [
-      "饿了",
-      "想吃",
-      "摆手",
-      "蓝猫",
-      "求投喂"
-    ]
-  },
-  "v2_3b4cfeb1-76e1-41a4-9596-a3fdb458f05l.gif": {
-    "filename": "v2_3b4cfeb1-76e1-41a4-9596-a3fdb458f05l.gif",
-    "aiName": "chubby-blue-cat-soft-smile",
-    "description": "圆滚滚的蓝色小猫抿着淡笑，传递出平和轻松、悠闲满足的情绪",
-    "tags": [
-      "可爱猫猫",
-      "微笑",
-      "悠闲",
-      "治愈"
-    ]
-  },
-  "v2_6f6dc780-2c17-42de-9dc6-8192ed403bcl.gif": {
-    "filename": "v2_6f6dc780-2c17-42de-9dc6-8192ed403bcl.gif",
-    "aiName": "cute-blue-cat-peeking",
-    "description": "软萌的蓝色小猫探出头偷看，传递好奇、默默围观的情绪，也可用于腼腆地打招呼等待回应",
-    "tags": [
-      "可爱猫猫",
-      "偷看",
-      "呆萌",
-      "好奇"
-    ]
-  },
-  "v2_7f563f6b-e8b2-4f2e-8e7b-77bfd8fc768l.gif": {
-    "filename": "v2_7f563f6b-e8b2-4f2e-8e7b-77bfd8fc768l.gif",
-    "aiName": "smiling-crescent-moon-face",
-    "description": "拟人化的弯月带着浅笑，可用来指代夜晚、表达晚安，传递出温和平静的氛围",
-    "tags": [
-      "月牙",
-      "微笑",
-      "拟人",
-      "夜晚"
-    ]
-  },
-  "getimgdata-5.gif": {
-    "filename": "getimgdata-5.gif",
-    "aiName": "naturally-honest-cute-bear",
-    "description": "无辜的小熊强调自己本来就老实安分，用来表达自己乖乖听话、没有作乱，或是示弱认怂的态度",
-    "tags": [
-      "老实人",
-      "认怂",
-      "乖巧",
-      "无辜"
-    ]
-  },
-  "getimgdata-8.gif": {
-    "filename": "getimgdata-8.gif",
-    "aiName": "double-cat-head-pat",
-    "description": "上方大猫摸下方小猫的头，神态戏谑，通常用来安抚他人，也可用于调侃玩梗",
-    "tags": [
-      "摸头",
-      "安抚",
-      "调侃",
-      "搞怪"
-    ]
-  },
-  "getimgdata-13.gif": {
-    "filename": "getimgdata-13.gif",
-    "aiName": "low-poly-walking-cat",
-    "description": "魔性低模建模的灰色猫咪正在迈步走路，风格鬼畜搞怪，常用来表达漫无目的晃悠、摸鱼闲逛或者离谱搞怪的情绪",
-    "tags": [
-      "魔性",
-      "猫咪",
-      "搞怪",
-      "走路",
-      "摸鱼"
-    ]
-  },
-  "v2_bf4deaf3-3b52-451a-9e9b-15039a85fe3l.gif": {
-    "filename": "v2_bf4deaf3-3b52-451a-9e9b-15039a85fe3l.gif",
-    "aiName": "flying-brown-bat",
-    "description": "这是一只展开双翼正在飞行的卡通棕色蝙蝠，可用来烘托阴森神秘的氛围，也常可用于万圣节相关内容中。",
-    "tags": [
-      "蝙蝠",
-      "飞行",
-      "万圣节",
-      "卡通动物"
-    ]
-  },
-  "v2_8daef0b9-6876-4ea5-9363-9f7eec248e5l.gif": {
-    "filename": "v2_8daef0b9-6876-4ea5-9363-9f7eec248e5l.gif",
-    "aiName": "blue-cat-nosebleed",
-    "description": "蓝色小猫鼻血直流，用来表达看到令人心动的事物后激动犯花痴、鼻血止不住的心情",
-    "tags": [
-      "犯花痴",
-      "流鼻血",
-      "心动",
-      "可爱小猫"
-    ]
-  },
-  "getimgdata-12.gif": {
-    "filename": "getimgdata-12.gif",
-    "aiName": "cute-two-sheep-cuddle",
-    "description": "两只软萌小羊亲昵依偎在一起，带着爱心传递出温馨亲密的喜爱，适合表达对亲近的人的喜欢",
-    "tags": [
-      "可爱",
-      "贴贴",
-      "亲密",
-      "温馨"
-    ]
-  },
-  "getimgdata-9.gif": {
-    "filename": "getimgdata-9.gif",
-    "aiName": "sly-smile-dee",
-    "description": "露出狡黠的坏笑，表达心里藏着坏主意，等着看八卦看热闹的心情",
-    "tags": [
-      "小S",
-      "坏笑",
-      "狡黠",
-      "看热闹"
-    ]
-  },
-  "v2_15f69528-c9fb-4749-aca6-a74f840d4bdl.gif": {
-    "filename": "v2_15f69528-c9fb-4749-aca6-a74f840d4bdl.gif",
-    "aiName": "skeptical-monocle-stare",
-    "description": "表情严肃戴着单片眼镜审视对方，传递出怀疑、不信任、探究真相的情绪",
-    "tags": [
-      "怀疑",
-      "审视",
-      "质疑",
-      "严肃"
-    ]
-  },
-  "getimgdata-10.gif": {
-    "filename": "getimgdata-10.gif",
-    "aiName": "shocked-fluffy-animal",
-    "description": "表现了遇到意外事件后炸毛冒冷汗，十分震惊受惊吓的状态，用来传达大吃一惊、猝不及防的情绪",
-    "tags": [
-      "震惊",
-      "惊吓",
-      "炸毛",
-      "意外"
-    ]
-  },
-  "v2_1872316f-4407-41d4-ad89-30c6cbe2b83l.gif": {
-    "filename": "v2_1872316f-4407-41d4-ad89-30c6cbe2b83l.gif",
-    "aiName": "blue-critter-pout-kiss",
-    "description": "蓝色小动物闭着眼睛嘟起嘴凑上前，想要亲亲，表达撒娇求亲亲的亲昵情绪",
-    "tags": [
-      "求亲亲",
-      "撒娇",
-      "可爱",
-      "亲昵"
-    ]
-  },
-  "getimgdata-11.gif": {
-    "filename": "getimgdata-11.gif",
-    "aiName": "smirk-touch-chin",
-    "description": "人物托着下巴斜眼坏笑，常用来表达暗自盘算、打着坏主意，或是带着玩味怀疑打量对方",
-    "tags": [
-      "坏笑",
-      "摸下巴",
-      "腹黑",
-      "盘算",
-      "怀疑"
-    ]
-  },
-  "getimgdata.png": {
-    "filename": "getimgdata.png",
-    "aiName": "blurry-nezha-grin",
-    "description": "模糊化的魔童哪吒玩偶咧嘴坏笑，搭配火焰背景，传递出搞怪、憋坏主意的得意情绪",
-    "tags": [
-      "哪吒",
-      "坏笑",
-      "搞怪",
-      "沙雕"
-    ]
-  },
-  "getimgdata.jpg": {
-    "filename": "getimgdata.jpg",
-    "aiName": "confused-pig-question",
-    "description": "表达满怀疑惑、摸不着头脑的懵圈状态，传神传递出满心疑问、感到不可思议的不解情绪，风格搞怪有趣",
-    "tags": [
-      "疑惑",
-      "懵圈",
-      "问号",
-      "搞怪"
-    ]
-  },
-  "v2_f311b7e9-a432-4bea-984c-b5fd9c3290bl.gif": {
-    "filename": "v2_f311b7e9-a432-4bea-984c-b5fd9c3290bl.gif",
-    "aiName": "laugh-crying-tears",
-    "description": "表达遇到极度好笑的事情，开心到笑出眼泪，传递出爆笑到失控的欢乐情绪",
-    "tags": [
-      "笑哭",
-      "笑到流泪",
-      "开心",
-      "爆笑"
-    ]
-  },
-  "v2_ddf0bcc0-2ab8-46b2-9cae-c84e247faf8l.gif": {
-    "filename": "v2_ddf0bcc0-2ab8-46b2-9cae-c84e247faf8l.gif",
-    "aiName": "angry-frowning-face",
-    "description": "这个表情传达了愤怒、不悦的情绪，用来抒发自己生气、不满的心情",
-    "tags": [
-      "愤怒",
-      "生气",
-      "不满",
-      "皱眉",
-      "情绪"
-    ]
-  },
-  "v2_c3363c89-c887-4f29-b365-79eea8dcdfel.gif": {
-    "filename": "v2_c3363c89-c887-4f29-b365-79eea8dcdfel.gif",
-    "aiName": "blue-cat-shy-blush",
-    "description": "蓝小猫满脸红晕一脸娇羞，表达对人心动爱慕、害羞喜欢的情绪",
-    "tags": [
-      "害羞",
-      "心动",
-      "爱慕",
-      "脸红"
-    ]
-  },
-  "v2_980e4836-9895-4459-9730-84817921cffl.gif": {
-    "filename": "v2_980e4836-9895-4459-9730-84817921cffl.gif",
-    "aiName": "blue-cat-playing-guitar",
-    "description": "蓝色小猫悠闲地弹着吉他，传递出自娱自乐、享受音乐的放松惬意情绪",
-    "tags": [
-      "弹吉他",
-      "悠闲",
-      "惬意",
-      "自娱自乐"
-    ]
-  },
-  "v2_18ec4f39-a600-430c-bbce-f68fe3557dfl.gif": {
-    "filename": "v2_18ec4f39-a600-430c-bbce-f68fe3557dfl.gif",
-    "aiName": "smug-squint-smile",
-    "description": "眯起眼睛带微笑，传递暗自得意、狡黠坏笑的情绪，常用来表达窃喜或是心里藏着小想法的状态",
-    "tags": [
-      "得意",
-      "坏笑",
-      "窃喜",
-      "狡黠"
-    ]
-  },
-  "getimgdata-1.png": {
-    "filename": "getimgdata-1.png",
-    "aiName": "truck-question-not-dead",
-    "description": "以卡车画面搭配文字“没死？”，表达难以置信的震惊情绪，常用来调侃自己或对方居然安然无事，带着离谱又惊讶的感觉",
-    "tags": [
-      "震惊",
-      "调侃",
-      "大难不死",
-      "离谱"
-    ]
-  },
-  "getimgdata-1.jpg": {
-    "filename": "getimgdata-1.jpg",
-    "aiName": "confused-cute-cat-question",
-    "description": "表达软萌的疑惑不解情绪，传递出对事物感到纳闷好奇、摸不着头脑的心情",
-    "tags": [
-      "疑惑",
-      "疑问",
-      "可爱",
-      "困惑"
-    ]
-  },
-  "v2_ce17e8ff-f185-4f52-907d-01d4df32b6fl.gif": {
-    "filename": "v2_ce17e8ff-f185-4f52-907d-01d4df32b6fl.gif",
-    "aiName": "wide-eyes-up-stare",
-    "description": "双眼向上睁大、嘴巴微张，一脸茫然，用来表达无语、发呆、意外错愕或是疑惑的情绪",
-    "tags": [
-      "茫然",
-      "无语",
-      "发呆",
-      "错愕"
-    ]
-  },
-  "v2_85f55a1d-f265-47a0-8bfc-5c93a0d5e6dl.gif": {
-    "filename": "v2_85f55a1d-f265-47a0-8bfc-5c93a0d5e6dl.gif",
-    "aiName": "crying-blue-cat",
-    "description": "蓝色猫咪张大嘴巴泪流满面，用来表达十分委屈、难过崩溃的情绪",
-    "tags": [
-      "哭泣",
-      "委屈",
-      "难过",
-      "崩溃"
-    ]
-  },
-  "5f6b65fb-4d23-40bd-9664-c69cfc2591fl.png": {
-    "filename": "5f6b65fb-4d23-40bd-9664-c69cfc2591fl.png",
-    "aiName": "xiaomi-employee-tired-eyes",
-    "description": "该表情包调侃了劳累工作后疲惫不堪的状态，用来吐槽工作太累、精力被耗尽的心情",
-    "tags": [
-      "小米员工",
-      "疲惫",
-      "加班",
-      "职场吐槽"
-    ]
-  },
-  "v2_25a0ed75-906f-4cae-be10-5e6a0110ea5l.gif": {
-    "filename": "v2_25a0ed75-906f-4cae-be10-5e6a0110ea5l.gif",
-    "aiName": "vampire-girl-fangs",
-    "description": "该贴纸是女吸血鬼形象，露出吸血鬼标志性的尖牙，正脸直视前方，可用于万圣节相关聊天或者表达另类个性",
-    "tags": [
-      "吸血鬼",
-      "万圣节",
-      "尖牙",
-      "搞怪"
-    ]
-  },
-  "v2_65320baf-bbae-48b9-b25c-051162a8be8l.gif": {
-    "filename": "v2_65320baf-bbae-48b9-b25c-051162a8be8l.gif",
-    "aiName": "cute-ghost-tongue-out",
-    "description": "可爱调皮的小幽灵吐着舌头张开手臂，传递出搞怪俏皮、捣蛋卖萌的情绪",
-    "tags": [
-      "搞怪",
-      "幽灵",
-      "调皮",
-      "卖萌"
-    ]
-  },
-  "v2_fc64a8a2-967b-4652-9324-754334d354el.gif": {
-    "filename": "v2_fc64a8a2-967b-4652-9324-754334d354el.gif",
-    "aiName": "wink-tongue-smiley",
-    "description": "该表情传递调皮搞怪、俏皮顽皮的情绪，常用于开玩笑、卖萌，或是表达恶作剧后的愉悦心情",
-    "tags": [
-      "调皮",
-      "搞怪",
-      "俏皮",
-      "开心"
-    ]
-  },
-  "getimgdata-2.jpg": {
-    "filename": "getimgdata-2.jpg",
-    "aiName": "upside-down-shocked-face",
-    "description": "倒置的人脸露出惊讶错愕的神情，用来表达看到离谱事物时震惊、不可思议的情绪",
-    "tags": [
-      "震惊",
-      "离谱",
-      "搞怪",
-      "诧异"
-    ]
-  },
-  "getimgdata-3.jpg": {
-    "filename": "getimgdata-3.jpg",
-    "aiName": "cowboy-robot-middle-finger",
-    "description": "戴牛仔帽的潮流机器人对着镜头竖中指，用来表达不满、挑衅，或是带着拽拽的态度拒绝对方",
-    "tags": [
-      "机器人",
-      "竖中指",
-      "挑衅",
-      "拽酷",
-      "牛仔帽"
-    ]
-  },
-  "v2_68db2c19-5145-4b9e-8767-6379d921ccel.gif": {
-    "filename": "v2_68db2c19-5145-4b9e-8767-6379d921ccel.gif",
-    "aiName": "blue-cat-cozy-sleep",
-    "description": "蓝色小猫盖着被子舒服躺卧，展现出慵懒放松、准备休息的惬意状态",
-    "tags": [
-      "慵懒",
-      "睡觉",
-      "放松",
-      "可爱"
-    ]
-  },
-  "v2_0018e771-0a00-4353-9ed4-3cdbc9d31a2l.gif": {
-    "filename": "v2_0018e771-0a00-4353-9ed4-3cdbc9d31a2l.gif",
-    "aiName": "blue-cat-burning-keyboard",
-    "description": "表现上网时看到让人火大的内容，整个人怒火中烧、烦躁上头的情绪",
-    "tags": [
-      "上网",
-      "生气",
-      "上火",
-      "愤怒"
-    ]
-  },
-  "v2_bdeabfeb-002c-4e90-893f-e4f7dc6a79el.gif": {
-    "filename": "v2_bdeabfeb-002c-4e90-893f-e4f7dc6a79el.gif",
-    "aiName": "loud-crying-face",
-    "description": "表现了忍不住放声大哭的状态，可以用来表达极度悲伤难过，也可以表达喜极而泣的强烈激动情绪",
-    "tags": [
-      "大哭",
-      "流泪",
-      "悲伤",
-      "喜极而泣"
-    ]
-  },
-  "v2_3fe81fd5-ca88-4b8b-bf0f-d85d927fcb7l.gif": {
-    "filename": "v2_3fe81fd5-ca88-4b8b-bf0f-d85d927fcb7l.gif",
-    "aiName": "winking-tongue-out-face",
-    "description": "单眼眨眼吐出舌头，传递调皮搞怪的情绪，多用于开玩笑、俏皮捉弄的场景",
-    "tags": [
-      "调皮",
-      "搞怪",
-      "眨眼",
-      "吐舌头",
-      "玩笑"
-    ]
-  },
-  "getimgdata-7.jpg": {
-    "filename": "getimgdata-7.jpg",
-    "aiName": "pinch-dog-face-control",
-    "description": "双手捏住狗狗的脸蛋，配文“拿捏”，表达一切尽在掌握，对事情稳操胜券的心态，也用来调侃已经搞定一切、稳稳拿捏住对方了",
-    "tags": [
-      "拿捏",
-      "狗狗",
-      "稳了",
-      "萌宠",
-      "搞定"
-    ]
-  },
-  "v2_be0fff12-0215-40ea-a67c-5f4812cd325l.gif": {
-    "filename": "v2_be0fff12-0215-40ea-a67c-5f4812cd325l.gif",
-    "aiName": "smiling-crescent-moon-face",
-    "description": "拟人化的微笑弯月，常用来指代夜晚，传递晚安、宁静悠闲的情绪",
-    "tags": [
-      "月亮",
-      "夜晚",
-      "微笑",
-      "晚安"
-    ]
-  },
-  "v2_c0566965-7e04-4ab9-af4b-fa979422b1bl.gif": {
-    "filename": "v2_c0566965-7e04-4ab9-af4b-fa979422b1bl.gif",
-    "aiName": "blue-cat-butt-love",
-    "description": "可爱蓝色小猫撅起屁股带着红心，向对方撒娇示爱，表达满满的喜爱与好感",
-    "tags": [
-      "可爱猫咪",
-      "撒娇",
-      "示爱",
-      "卖萌"
-    ]
-  },
-  "getimgdata-6.jpg": {
-    "filename": "getimgdata-6.jpg",
-    "aiName": "kirby-gun-aim",
-    "description": "恶搞的星之卡比贴纸，卡比面带微笑拿枪对准前方，一般用于开玩笑放狠话、向对方施压提要求，表达戏谑的威胁感",
-    "tags": [
-      "星之卡比",
-      "放狠话",
-      "搞笑",
-      "威胁"
-    ]
-  },
-  "v2_c214f4db-0bc9-4fb5-8bc9-57393e6b7a2l.gif": {
-    "filename": "v2_c214f4db-0bc9-4fb5-8bc9-57393e6b7a2l.gif",
-    "aiName": "bunny-full-of-love",
-    "description": "软萌小动物趴着，周围飘满爱心，表达满溢出来的喜爱与心动，传递满满的爱意和欢喜",
-    "tags": [
-      "心动",
-      "喜爱",
-      "爱意",
-      "软萌"
-    ]
-  },
-  "getimgdata-4.jpg": {
-    "filename": "getimgdata-4.jpg",
-    "aiName": "dayun-truck-good-luck-pun",
-    "description": "这是谐音双关的搞笑表情包，图为大运重卡，配文「你要撞大运咯」玩双关梗，既字面指撞上这辆大运卡车，又谐音祝福对方即将撞大运、交到好运气，幽默讨喜",
-    "tags": [
-      "谐音梗",
-      "搞笑",
-      "好运祝福",
-      "玩梗"
-    ]
-  },
-  "v2_1b816ee1-7f2f-4f92-a2c3-c0330d4c574l.gif": {
-    "filename": "v2_1b816ee1-7f2f-4f92-a2c3-c0330d4c574l.gif",
-    "aiName": "ok-hand-gesture",
-    "description": "该贴纸比出OK手势，用来表示一切妥当没问题，传达同意、认可、肯定的情绪",
-    "tags": [
-      "OK手势",
-      "认可",
-      "没问题",
-      "肯定"
-    ]
-  },
-  "getimgdata-5.jpg": {
-    "filename": "getimgdata-5.jpg",
-    "aiName": "admit-defeat-fall",
-    "description": "用夸张俯身头贴地的姿势表示认输认栽，承认自己比不过，甘愿服输",
-    "tags": [
-      "认栽",
-      "认输",
-      "服输",
-      "投降"
-    ]
-  },
-  "zhiyin.gif": {
-    "filename": "zhiyin.gif",
-    "aiName": "cxk-silhouette-basketball-dance",
-    "description": "蔡徐坤经典鬼畜跳舞剪影，再多看一眼就会爆炸，篮球、鸡你太美梗的灵魂表情包，表达魔性洗脑、放飞自我的情绪",
-    "tags": [
-      "蔡徐坤",
-      "鬼畜",
-      "篮球",
-      "鸡你太美",
-      "魔性跳舞",
-      "放飞自我"
-    ]
+  "xiaomi-employee-tired-eyes.png": {
+    "filename": "xiaomi-employee-tired-eyes.png",
+    "aiName": {
+      "en": "xiaomi-employee-tired-eyes",
+      "zh": "疲惫不堪的小米员工"
+    },
+    "description": {
+      "en": "An exhausted office worker with sunken tired eyes — captures the burnt-out vibe after overtime crunch, perfect for venting about long hours.",
+      "zh": "该表情包调侃了劳累工作后疲惫不堪的状态，用来吐槽工作太累、精力被耗尽的心情"
+    },
+    "tags": {
+      "en": [
+        "tired",
+        "overtime",
+        "burnout",
+        "workplace",
+        "exhausted",
+        "xiaomi"
+      ],
+      "zh": [
+        "小米员工",
+        "疲惫",
+        "加班",
+        "职场吐槽"
+      ]
+    }
+  },
+  "cute-cat-reaching-paw.gif": {
+    "filename": "cute-cat-reaching-paw.gif",
+    "aiName": {
+      "en": "cute-cat-reaching-paw",
+      "zh": "伸爪的可爱猫咪"
+    },
+    "description": {
+      "en": "A cat stretches its paw toward the camera with curiosity and affection, as if it wants to touch you through the screen — soft, friendly, great for greetings.",
+      "zh": "猫咪抬起爪子伸向镜头，带着好奇与亲昵，仿佛想要触碰屏幕前的你，传递出软萌亲近的感觉，适合用来打招呼"
+    },
+    "tags": {
+      "en": [
+        "cat",
+        "cute",
+        "reaching",
+        "paw",
+        "hello",
+        "greeting",
+        "affection"
+      ],
+      "zh": [
+        "猫咪",
+        "可爱",
+        "伸手",
+        "萌宠",
+        "亲昵",
+        "打招呼"
+      ]
+    }
+  },
+  "confused-cute-cat-question.jpg": {
+    "filename": "confused-cute-cat-question.jpg",
+    "aiName": {
+      "en": "confused-cute-cat-question",
+      "zh": "疑惑的可爱猫咪"
+    },
+    "description": {
+      "en": "A soft, baffled expression — conveys cute confusion and gentle bewilderment, fitting for when something just doesn't add up.",
+      "zh": "表达软萌的疑惑不解情绪，传递出对事物感到纳闷好奇、摸不着头脑的心情"
+    },
+    "tags": {
+      "en": [
+        "confused",
+        "question",
+        "cute",
+        "puzzled",
+        "bewildered",
+        "huh"
+      ],
+      "zh": [
+        "疑惑",
+        "疑问",
+        "可爱",
+        "困惑"
+      ]
+    }
+  },
+  "truck-question-not-dead.png": {
+    "filename": "truck-question-not-dead.png",
+    "aiName": {
+      "en": "truck-question-not-dead",
+      "zh": "没死卡车"
+    },
+    "description": {
+      "en": "A truck paired with the text \"Not dead?\" — expresses incredulous shock, used to tease yourself or others for surviving something absurd.",
+      "zh": "以卡车画面搭配文字“没死？”，表达难以置信的震惊情绪，常用来调侃自己或对方居然安然无事，带着离谱又惊讶的感觉"
+    },
+    "tags": {
+      "en": [
+        "shocked",
+        "sarcasm",
+        "close-call",
+        "absurd",
+        "survived",
+        "not-dead"
+      ],
+      "zh": [
+        "震惊",
+        "调侃",
+        "大难不死",
+        "离谱"
+      ]
+    }
+  },
+  "shocked-fluffy-animal.gif": {
+    "filename": "shocked-fluffy-animal.gif",
+    "aiName": {
+      "en": "shocked-fluffy-animal",
+      "zh": "炸毛震惊小动物"
+    },
+    "description": {
+      "en": "A fluffy animal bristling and cold-sweating — captures the instant reaction to something unexpected, great for \"wait, what?\" moments.",
+      "zh": "表现了遇到意外事件后炸毛冒冷汗，十分震惊受惊吓的状态，用来传达大吃一惊、猝不及防的情绪"
+    },
+    "tags": {
+      "en": [
+        "shocked",
+        "startled",
+        "bristling",
+        "unexpected",
+        "what",
+        "scared"
+      ],
+      "zh": [
+        "震惊",
+        "惊吓",
+        "炸毛",
+        "意外"
+      ]
+    }
+  },
+  "grumpy-guy-f-word.jpg": {
+    "filename": "grumpy-guy-f-word.jpg",
+    "aiName": {
+      "en": "grumpy-guy-f-word",
+      "zh": "烦躁爆粗男子"
+    },
+    "description": {
+      "en": "For when something absolutely ridiculous happens and you can't help but want to curse out loud — peak frustration.",
+      "zh": "表达遇到糟心离谱的事情时，烦躁无语、忍不住想要爆粗发泄的情绪"
+    },
+    "tags": {
+      "en": [
+        "frustrated",
+        "annoyed",
+        "rant",
+        "swearing",
+        "grumpy",
+        "pissed"
+      ],
+      "zh": [
+        "烦躁",
+        "无语",
+        "吐槽",
+        "爆粗"
+      ]
+    }
+  },
+  "smirk-touch-chin.gif": {
+    "filename": "smirk-touch-chin.gif",
+    "aiName": {
+      "en": "smirk-touch-chin",
+      "zh": "托腮坏笑"
+    },
+    "description": {
+      "en": "A person rubs their chin with a sly smirk — used when scheming, plotting mischief, or sizing someone up with playful suspicion.",
+      "zh": "人物托着下巴斜眼坏笑，常用来表达暗自盘算、打着坏主意，或是带着玩味怀疑打量对方"
+    },
+    "tags": {
+      "en": [
+        "smirk",
+        "scheming",
+        "plotting",
+        "sly",
+        "suspicious",
+        "chin-rub"
+      ],
+      "zh": [
+        "坏笑",
+        "摸下巴",
+        "腹黑",
+        "盘算",
+        "怀疑"
+      ]
+    }
+  },
+  "huh-grinning-guy.jpg": {
+    "filename": "huh-grinning-guy.jpg",
+    "aiName": {
+      "en": "huh-grinning-guy",
+      "zh": "坏笑“噫”男子"
+    },
+    "description": {
+      "en": "A playful grin with the interjection \"hmm?\" — for expressing amused confusion, teasing, or smug curiosity.",
+      "zh": "面带玩味的笑容发出语气词“噫”，用来表达疑惑、讶异或是调侃玩味的情绪"
+    },
+    "tags": {
+      "en": [
+        "hmm",
+        "confused",
+        "teasing",
+        "smirk",
+        "amused",
+        "huh"
+      ],
+      "zh": [
+        "噫",
+        "疑惑",
+        "调侃",
+        "坏笑"
+      ]
+    }
+  },
+  "cute-two-sheep-cuddle.gif": {
+    "filename": "cute-two-sheep-cuddle.gif",
+    "aiName": {
+      "en": "cute-two-sheep-cuddle",
+      "zh": "两只可爱小羊贴贴"
+    },
+    "description": {
+      "en": "Two fluffy sheep snuggled close together with a heart — pure wholesome affection for someone you care about.",
+      "zh": "两只软萌小羊亲昵依偎在一起，带着爱心传递出温馨亲密的喜爱，适合表达对亲近的人的喜欢"
+    },
+    "tags": {
+      "en": [
+        "cute",
+        "cuddle",
+        "sheep",
+        "love",
+        "affection",
+        "cozy",
+        "wholesome"
+      ],
+      "zh": [
+        "可爱",
+        "贴贴",
+        "亲密",
+        "温馨",
+        "小羊"
+      ]
+    }
+  },
+  "confused-boy-question-marks.jpg": {
+    "filename": "confused-boy-question-marks.jpg",
+    "aiName": {
+      "en": "confused-boy-question-marks",
+      "zh": "满头问号男孩"
+    },
+    "description": {
+      "en": "A dazed, questioning expression — unable to parse whatever just happened, surrounded by imaginary question marks.",
+      "zh": "表达一脸茫然疑惑的状态，对看到或听到的事物感到摸不着头脑，充满疑问"
+    },
+    "tags": {
+      "en": [
+        "confused",
+        "question-marks",
+        "dazed",
+        "puzzled",
+        "huh",
+        "lost"
+      ],
+      "zh": [
+        "疑惑",
+        "问号",
+        "懵圈",
+        "疑问"
+      ]
+    }
+  },
+  "low-poly-walking-cat.gif": {
+    "filename": "low-poly-walking-cat.gif",
+    "aiName": {
+      "en": "low-poly-walking-cat",
+      "zh": "低模走路猫"
+    },
+    "description": {
+      "en": "A chunky low-poly grey cat plodding along with absurd energy — perfect for aimless wandering, slacking, or just being goofy.",
+      "zh": "魔性低模建模的灰色猫咪正在迈步走路，风格鬼畜搞怪，常用来表达漫无目的晃悠、摸鱼闲逛或者离谱搞怪的情绪"
+    },
+    "tags": {
+      "en": [
+        "cursed",
+        "cat",
+        "goofy",
+        "walking",
+        "slacking",
+        "low-poly"
+      ],
+      "zh": [
+        "魔性",
+        "猫咪",
+        "搞怪",
+        "走路",
+        "摸鱼"
+      ]
+    }
+  },
+  "ye-shi-la-shout.jpg": {
+    "filename": "ye-shi-la-shout.jpg",
+    "aiName": {
+      "en": "ye-shi-la-shout",
+      "zh": "叶诗拉怒吼"
+    },
+    "description": {
+      "en": "A classic Chinese meme shout — use it when you're actively irritated, roasting someone, or leaning into the joke with righteous anger.",
+      "zh": "这是经典鬼畜梗表情包，用来表达愤怒不满的情绪，适合怼人吐槽或是玩梗调侃"
+    },
+    "tags": {
+      "en": [
+        "angry",
+        "rant",
+        "meme",
+        "shouting",
+        "roasting",
+        "cursed"
+      ],
+      "zh": [
+        "鬼畜梗",
+        "怼人",
+        "搞笑",
+        "玩梗",
+        "愤怒"
+      ]
+    }
+  },
+  "disgusted-pained-grimace.jpg": {
+    "filename": "disgusted-pained-grimace.jpg",
+    "aiName": {
+      "en": "disgusted-pained-grimace",
+      "zh": "极度嫌弃表情"
+    },
+    "description": {
+      "en": "A face scrunched in physical revulsion — for things so off-putting they produce an involuntary body reaction. Peak disgust.",
+      "zh": "脸部紧皱挤出难受的表情，表达对人或事物极度反感恶心、生理上难以接受的不适情绪"
+    },
+    "tags": {
+      "en": [
+        "disgusted",
+        "grimace",
+        "revolted",
+        "gross",
+        "cringe",
+        "yuck"
+      ],
+      "zh": [
+        "极度嫌弃",
+        "生理不适",
+        "恶心反感",
+        "离谱"
+      ]
+    }
+  },
+  "big-problem-panic.jpg": {
+    "filename": "big-problem-panic.jpg",
+    "aiName": {
+      "en": "big-problem-panic",
+      "zh": "慌乱大问题"
+    },
+    "description": {
+      "en": "Inner panic face for when something's about to go sideways — the \"oh no\" moment when you realise you're in trouble.",
+      "zh": "表达遇到大问题后内心慌乱不安，用来调侃情况糟糕、大事不妙的处境"
+    },
+    "tags": {
+      "en": [
+        "panic",
+        "oh-no",
+        "trouble",
+        "anxious",
+        "worried",
+        "uh-oh"
+      ],
+      "zh": [
+        "慌乱",
+        "出大事",
+        "调侃",
+        "大事不妙"
+      ]
+    }
+  },
+  "blank-speechless-face.jpg": {
+    "filename": "blank-speechless-face.jpg",
+    "aiName": {
+      "en": "blank-speechless-face",
+      "zh": "呆滞脸"
+    },
+    "description": {
+      "en": "A blank stare that says \"I have no words\" — for when something so absurd happens you can't even formulate a response.",
+      "zh": "呈现出一脸茫然呆滞的状态，用来表达遇到离谱事情时无语、不知道该说什么的情绪"
+    },
+    "tags": {
+      "en": [
+        "speechless",
+        "blank",
+        "stunned",
+        "dazed",
+        "no-words",
+        "wtf"
+      ],
+      "zh": [
+        "无语",
+        "呆滞",
+        "茫然",
+        "发呆"
+      ]
+    }
+  },
+  "red-faced-smirking-dance.gif": {
+    "filename": "red-faced-smirking-dance.gif",
+    "aiName": {
+      "en": "red-faced-smirking-dance",
+      "zh": "红脸坏笑劈叉"
+    },
+    "description": {
+      "en": "Silly splits pose with a red-faced smirk — for when you've done something mischievous and can't hide how pleased you are.",
+      "zh": "摆出搞怪劈叉姿势，红脸坏笑，通常用来表达做了小坏事之后窃喜得意，或是尴尬又好笑的情绪"
+    },
+    "tags": {
+      "en": [
+        "goofy",
+        "smirk",
+        "smug",
+        "silly",
+        "proud",
+        "splits"
+      ],
+      "zh": [
+        "搞怪",
+        "坏笑",
+        "窃喜",
+        "沙雕"
+      ]
+    }
+  },
+  "upside-down-shocked-face.jpg": {
+    "filename": "upside-down-shocked-face.jpg",
+    "aiName": {
+      "en": "upside-down-shocked-face",
+      "zh": "倒置震惊脸"
+    },
+    "description": {
+      "en": "An upside-down face with a shocked expression — the surreal format amplifies the \"wait, WHAT?\" energy.",
+      "zh": "倒置的人脸露出惊讶错愕的神情，用来表达看到离谱事物时震惊、不可思议的情绪"
+    },
+    "tags": {
+      "en": [
+        "shocked",
+        "absurd",
+        "goofy",
+        "upside-down",
+        "astonished",
+        "wtf"
+      ],
+      "zh": [
+        "震惊",
+        "离谱",
+        "搞怪",
+        "诧异"
+      ]
+    }
+  },
+  "confused-grey-sitting-puppy.gif": {
+    "filename": "confused-grey-sitting-puppy.gif",
+    "aiName": {
+      "en": "confused-grey-sitting-puppy",
+      "zh": "歪头疑惑小灰狗"
+    },
+    "description": {
+      "en": "A grey puppy tilts its head and reaches out a paw, utterly bewildered — for when you can't make sense of something.",
+      "zh": "灰色小狗歪头张嘴伸爪，一脸茫然困惑，用来表达疑惑不解、摸不着头脑的情绪"
+    },
+    "tags": {
+      "en": [
+        "confused",
+        "puppy",
+        "head-tilt",
+        "bewildered",
+        "puzzled",
+        "dog"
+      ],
+      "zh": [
+        "疑惑",
+        "小狗",
+        "茫然",
+        "歪头"
+      ]
+    }
+  },
+  "cowboy-robot-middle-finger.jpg": {
+    "filename": "cowboy-robot-middle-finger.jpg",
+    "aiName": {
+      "en": "cowboy-robot-middle-finger",
+      "zh": "牛仔帽机器人竖中指"
+    },
+    "description": {
+      "en": "A cowboy-hat-wearing robot flipping the camera off — for expressing disdain, defiance, or a swaggering \"nope\".",
+      "zh": "戴牛仔帽的潮流机器人对着镜头竖中指，用来表达不满、挑衅，或是带着拽拽的态度拒绝对方"
+    },
+    "tags": {
+      "en": [
+        "middle-finger",
+        "robot",
+        "defiant",
+        "cocky",
+        "swagger",
+        "nope"
+      ],
+      "zh": [
+        "机器人",
+        "竖中指",
+        "挑衅",
+        "拽酷",
+        "牛仔帽"
+      ]
+    }
+  },
+  "shocked-thick-lip-orange-cat.gif": {
+    "filename": "shocked-thick-lip-orange-cat.gif",
+    "aiName": {
+      "en": "shocked-thick-lip-orange-cat",
+      "zh": "厚嘴唇震惊橘猫"
+    },
+    "description": {
+      "en": "A photoshop-cursed orange cat with human-like thick lips and a shocked look — pure meme energy for disbelief.",
+      "zh": "这是经过魔改P图的搞笑表情包，给橘猫加上人类厚嘴唇，露出惊讶疑惑的神情，用来表达震惊、不敢相信或一脸茫然的情绪"
+    },
+    "tags": {
+      "en": [
+        "cursed",
+        "shocked",
+        "cat",
+        "meme",
+        "disbelief",
+        "wtf"
+      ],
+      "zh": [
+        "搞笑",
+        "惊讶",
+        "疑惑",
+        "橘猫",
+        "表情包"
+      ]
+    }
+  },
+  "dayun-truck-good-luck-pun.jpg": {
+    "filename": "dayun-truck-good-luck-pun.jpg",
+    "aiName": {
+      "en": "dayun-truck-good-luck-pun",
+      "zh": "撞大运卡车谐音梗"
+    },
+    "description": {
+      "en": "A pun sticker: a \"Dayun\" brand truck with caption \"you're about to hit the big luck\" — double meaning of literally hitting the truck and idiomatically striking lucky.",
+      "zh": "这是谐音双关的搞笑表情包，图为大运重卡，配文「你要撞大运咯」玩双关梗，既字面指撞上这辆大运卡车，又谐音祝福对方即将撞大运、交到好运气，幽默讨喜"
+    },
+    "tags": {
+      "en": [
+        "pun",
+        "good-luck",
+        "meme",
+        "wordplay",
+        "truck",
+        "funny"
+      ],
+      "zh": [
+        "谐音梗",
+        "搞笑",
+        "好运祝福",
+        "玩梗"
+      ]
+    }
+  },
+  "naturally-honest-cute-bear.gif": {
+    "filename": "naturally-honest-cute-bear.gif",
+    "aiName": {
+      "en": "naturally-honest-cute-bear",
+      "zh": "无辜乖巧小熊"
+    },
+    "description": {
+      "en": "An innocent bear insisting it was always well-behaved — for when you want to protest your innocence or sheepishly back down.",
+      "zh": "无辜的小熊强调自己本来就老实安分，用来表达自己乖乖听话、没有作乱，或是示弱认怂的态度"
+    },
+    "tags": {
+      "en": [
+        "innocent",
+        "meek",
+        "well-behaved",
+        "bear",
+        "cute",
+        "backing-down"
+      ],
+      "zh": [
+        "老实人",
+        "认怂",
+        "乖巧",
+        "无辜"
+      ]
+    }
+  },
+  "admit-defeat-fall.jpg": {
+    "filename": "admit-defeat-fall.jpg",
+    "aiName": {
+      "en": "admit-defeat-fall",
+      "zh": "认栽倒地"
+    },
+    "description": {
+      "en": "An exaggerated face-plant pose admitting defeat — \"you got me, I concede\", perfect for losing with style.",
+      "zh": "用夸张俯身头贴地的姿势表示认输认栽，承认自己比不过，甘愿服输"
+    },
+    "tags": {
+      "en": [
+        "defeat",
+        "concede",
+        "surrender",
+        "give-up",
+        "you-win",
+        "i-give-up"
+      ],
+      "zh": [
+        "认栽",
+        "认输",
+        "服输",
+        "投降"
+      ]
+    }
+  },
+  "cute-rabbit-stare.gif": {
+    "filename": "cute-rabbit-stare.gif",
+    "aiName": {
+      "en": "cute-rabbit-stare",
+      "zh": "呆萌兔子注视"
+    },
+    "description": {
+      "en": "A wide-eyed bunny staring straight ahead — conveys innocence, blankness, or patiently waiting for your response.",
+      "zh": "呆萌兔子直勾勾看着前方，传达出无辜、茫然或是等待对方回应的情绪"
+    },
+    "tags": {
+      "en": [
+        "bunny",
+        "cute",
+        "staring",
+        "innocent",
+        "waiting",
+        "blank"
+      ],
+      "zh": [
+        "兔子",
+        "呆萌",
+        "无辜",
+        "注视"
+      ]
+    }
+  },
+  "kirby-gun-aim.jpg": {
+    "filename": "kirby-gun-aim.jpg",
+    "aiName": {
+      "en": "kirby-gun-aim",
+      "zh": "卡比举枪"
+    },
+    "description": {
+      "en": "A cursed Kirby smiling while aiming a gun — for joking threats, playful pressure, or tongue-in-cheek \"do it or else\" energy.",
+      "zh": "恶搞的星之卡比贴纸，卡比面带微笑拿枪对准前方，一般用于开玩笑放狠话、向对方施压提要求，表达戏谑的威胁感"
+    },
+    "tags": {
+      "en": [
+        "kirby",
+        "threat",
+        "gun",
+        "cursed",
+        "joke",
+        "do-it"
+      ],
+      "zh": [
+        "星之卡比",
+        "放狠话",
+        "搞笑",
+        "威胁"
+      ]
+    }
+  },
+  "cute-frog-chin-thinking.gif": {
+    "filename": "cute-frog-chin-thinking.gif",
+    "aiName": {
+      "en": "cute-frog-chin-thinking",
+      "zh": "托腮思考小青蛙"
+    },
+    "description": {
+      "en": "A line-drawn frog tilts its head and rests its chin on its hand, pondering — for when you're thinking it over or mulling a question.",
+      "zh": "线条绘制的呆萌小青蛙歪头托着下巴，正若有所思地琢磨事情，用来表达自己在思考问题、心存疑惑的状态"
+    },
+    "tags": {
+      "en": [
+        "thinking",
+        "frog",
+        "pondering",
+        "cute",
+        "hmm",
+        "chin-rest"
+      ],
+      "zh": [
+        "思考",
+        "呆萌",
+        "若有所思",
+        "歪头",
+        "青蛙"
+      ]
+    }
+  },
+  "pinch-dog-face-control.jpg": {
+    "filename": "pinch-dog-face-control.jpg",
+    "aiName": {
+      "en": "pinch-dog-face-control",
+      "zh": "捏狗脸拿捏"
+    },
+    "description": {
+      "en": "Hands pinching a dog's cheeks with the caption \"got it\" — expresses total control, confidence, or \"nailed it, they're mine now\".",
+      "zh": "双手捏住狗狗的脸蛋，配文“拿捏”，表达一切尽在掌握，对事情稳操胜券的心态，也用来调侃已经搞定一切、稳稳拿捏住对方了"
+    },
+    "tags": {
+      "en": [
+        "got-it",
+        "control",
+        "nailed-it",
+        "dog",
+        "confident",
+        "handled",
+        "won"
+      ],
+      "zh": [
+        "拿捏",
+        "狗狗",
+        "稳了",
+        "萌宠",
+        "搞定"
+      ]
+    }
+  },
+  "double-cat-head-pat.gif": {
+    "filename": "double-cat-head-pat.gif",
+    "aiName": {
+      "en": "double-cat-head-pat",
+      "zh": "猫咪摸头"
+    },
+    "description": {
+      "en": "A big cat pats a smaller cat's head with a smirk — used to playfully reassure or tease someone.",
+      "zh": "上方大猫摸下方小猫的头，神态戏谑，通常用来安抚他人，也可用于调侃玩梗"
+    },
+    "tags": {
+      "en": [
+        "head-pat",
+        "comfort",
+        "tease",
+        "cat",
+        "reassure",
+        "there-there"
+      ],
+      "zh": [
+        "摸头",
+        "安抚",
+        "调侃",
+        "搞怪"
+      ]
+    }
+  },
+  "smiling-man-thumbs-up.jpg": {
+    "filename": "smiling-man-thumbs-up.jpg",
+    "aiName": {
+      "en": "smiling-man-thumbs-up",
+      "zh": "微笑竖拇指男子"
+    },
+    "description": {
+      "en": "A smiling man giving a thumbs-up — can genuinely mean approval, but equally often means \"sure, whatever, I guess\" when something absurd just happened.",
+      "zh": "男子面带笑容竖起大拇指，既可以用来表达赞许与肯定，也常用来调侃面对离谱事情时无奈、强颜欢笑接受的情绪"
+    },
+    "tags": {
+      "en": [
+        "thumbs-up",
+        "approval",
+        "like",
+        "smile",
+        "forced-smile",
+        "sure-okay"
+      ],
+      "zh": [
+        "点赞",
+        "认可",
+        "无奈",
+        "微笑"
+      ]
+    }
+  },
+  "sly-smile-dee.gif": {
+    "filename": "sly-smile-dee.gif",
+    "aiName": {
+      "en": "sly-smile-dee",
+      "zh": "小S狡黠坏笑"
+    },
+    "description": {
+      "en": "A sly, knowing grin — for when you're secretly up to something or eagerly waiting for the gossip to unfold.",
+      "zh": "露出狡黠的坏笑，表达心里藏着坏主意，等着看八卦看热闹的心情"
+    },
+    "tags": {
+      "en": [
+        "sly",
+        "smirk",
+        "sneaky",
+        "gossip",
+        "scheming",
+        "tea"
+      ],
+      "zh": [
+        "小S",
+        "坏笑",
+        "狡黠",
+        "看热闹"
+      ]
+    }
+  },
+  "blurry-confused-guy.jpg": {
+    "filename": "blurry-confused-guy.jpg",
+    "aiName": {
+      "en": "blurry-confused-guy",
+      "zh": "模糊懵圈人"
+    },
+    "description": {
+      "en": "A blurry figure tilts their head in total bewilderment — peak \"what's going on\" energy.",
+      "zh": "模糊的人物歪着脑袋，一脸茫然搞不清状况，表达疑惑不解、摸不着头脑的懵圈状态"
+    },
+    "tags": {
+      "en": [
+        "confused",
+        "dazed",
+        "bewildered",
+        "lost",
+        "blurry",
+        "wtf"
+      ],
+      "zh": [
+        "一脸懵",
+        "疑惑",
+        "迷茫",
+        "不解"
+      ]
+    }
+  },
+  "confused-pig-question.jpg": {
+    "filename": "confused-pig-question.jpg",
+    "aiName": {
+      "en": "confused-pig-question",
+      "zh": "满脸疑惑猪"
+    },
+    "description": {
+      "en": "A goofy pig face drowning in question marks — for when something is so baffling you just stare.",
+      "zh": "表达满怀疑惑、摸不着头脑的懵圈状态，传神传递出满心疑问、感到不可思议的不解情绪，风格搞怪有趣"
+    },
+    "tags": {
+      "en": [
+        "confused",
+        "question",
+        "pig",
+        "bewildered",
+        "huh",
+        "goofy"
+      ],
+      "zh": [
+        "疑惑",
+        "懵圈",
+        "问号",
+        "搞怪"
+      ]
+    }
+  },
+  "blurry-nezha-grin.png": {
+    "filename": "blurry-nezha-grin.png",
+    "aiName": {
+      "en": "blurry-nezha-grin",
+      "zh": "模糊哪吒坏笑"
+    },
+    "description": {
+      "en": "A blurred Nezha doll grins mischievously against a fiery backdrop — for when you're cooking up something devious.",
+      "zh": "模糊化的魔童哪吒玩偶咧嘴坏笑，搭配火焰背景，传递出搞怪、憋坏主意的得意情绪"
+    },
+    "tags": {
+      "en": [
+        "nezha",
+        "smirk",
+        "mischievous",
+        "cursed",
+        "goofy",
+        "scheming"
+      ],
+      "zh": [
+        "哪吒",
+        "坏笑",
+        "搞怪",
+        "沙雕"
+      ]
+    }
+  },
+  "blue-cat-burning-keyboard.gif": {
+    "filename": "blue-cat-burning-keyboard.gif",
+    "aiName": {
+      "en": "blue-cat-burning-keyboard",
+      "zh": "蓝猫烧键盘"
+    },
+    "description": {
+      "en": "Blue cat smashing a keyboard in rage — for when you see something online that makes your blood boil.",
+      "zh": "表现上网时看到让人火大的内容，整个人怒火中烧、烦躁上头的情绪"
+    },
+    "tags": {
+      "en": [
+        "angry",
+        "online-rage",
+        "keyboard",
+        "mad",
+        "fuming",
+        "triggered"
+      ],
+      "zh": [
+        "上网",
+        "生气",
+        "上火",
+        "愤怒"
+      ]
+    }
+  },
+  "wink-kiss-heart.gif": {
+    "filename": "wink-kiss-heart.gif",
+    "aiName": {
+      "en": "wink-kiss-heart",
+      "zh": "眨眼飞吻爱心"
+    },
+    "description": {
+      "en": "A winking blow-kiss sending a heart — sweet affection and playful love.",
+      "zh": "眨单眼做出飞吻动作送出爱心，用来向对方表达爱意与好感"
+    },
+    "tags": {
+      "en": [
+        "kiss",
+        "wink",
+        "love",
+        "heart",
+        "affection",
+        "flirt"
+      ],
+      "zh": [
+        "飞吻",
+        "示爱",
+        "爱心",
+        "亲亲"
+      ]
+    }
+  },
+  "angry-flaming-blue-shark.gif": {
+    "filename": "angry-flaming-blue-shark.gif",
+    "aiName": {
+      "en": "angry-flaming-blue-shark",
+      "zh": "怒火蓝鲨"
+    },
+    "description": {
+      "en": "A cute blue shark with flames burning above its head — cute but absolutely furious, for venting pissed-off feelings.",
+      "zh": "可爱的蓝色小鲨头顶熊熊怒火，表现出极度愤怒、怒火中烧的状态，用来抒发自己愤怒不满的情绪"
+    },
+    "tags": {
+      "en": [
+        "angry",
+        "rage",
+        "shark",
+        "fuming",
+        "mad",
+        "pissed"
+      ],
+      "zh": [
+        "愤怒",
+        "发火",
+        "暴怒",
+        "可爱"
+      ]
+    }
+  },
+  "skeptical-monocle-stare.gif": {
+    "filename": "skeptical-monocle-stare.gif",
+    "aiName": {
+      "en": "skeptical-monocle-stare",
+      "zh": "单片眼镜审视"
+    },
+    "description": {
+      "en": "A stern figure wearing a monocle, scrutinising you — conveys deep suspicion and \"let me get this straight\" doubt.",
+      "zh": "表情严肃戴着单片眼镜审视对方，传递出怀疑、不信任、探究真相的情绪"
+    },
+    "tags": {
+      "en": [
+        "skeptical",
+        "monocle",
+        "suspicious",
+        "scrutiny",
+        "doubt",
+        "really"
+      ],
+      "zh": [
+        "怀疑",
+        "审视",
+        "质疑",
+        "严肃"
+      ]
+    }
+  },
+  "blue-cat-loving-smile.gif": {
+    "filename": "blue-cat-loving-smile.gif",
+    "aiName": {
+      "en": "blue-cat-loving-smile",
+      "zh": "蓝猫爱心微笑"
+    },
+    "description": {
+      "en": "Soft blue cat smiling with hearts — all affection, perfect for sweet sentiment.",
+      "zh": "软萌的蓝色猫猫带着爱心微笑，传递出对对方满满的喜爱与好感，氛围甜蜜治愈"
+    },
+    "tags": {
+      "en": [
+        "cute",
+        "love",
+        "heart",
+        "cat",
+        "sweet",
+        "wholesome"
+      ],
+      "zh": [
+        "可爱",
+        "喜爱",
+        "治愈",
+        "卖萌"
+      ]
+    }
+  },
+  "blue-critter-pout-kiss.gif": {
+    "filename": "blue-critter-pout-kiss.gif",
+    "aiName": {
+      "en": "blue-critter-pout-kiss",
+      "zh": "蓝色小动物求亲亲"
+    },
+    "description": {
+      "en": "A blue critter eyes closed, lips puckered, leaning in for a kiss — pure cutesy begging.",
+      "zh": "蓝色小动物闭着眼睛嘟起嘴凑上前，想要亲亲，表达撒娇求亲亲的亲昵情绪"
+    },
+    "tags": {
+      "en": [
+        "kiss-please",
+        "pout",
+        "cute",
+        "clingy",
+        "affection",
+        "mwah"
+      ],
+      "zh": [
+        "求亲亲",
+        "撒娇",
+        "可爱",
+        "亲昵"
+      ]
+    }
+  },
+  "smug-squint-smile.gif": {
+    "filename": "smug-squint-smile.gif",
+    "aiName": {
+      "en": "smug-squint-smile",
+      "zh": "狡黠眯眼微笑"
+    },
+    "description": {
+      "en": "Squinting smug smile — for when you're quietly pleased with yourself or hiding a little plan.",
+      "zh": "眯起眼睛带微笑，传递暗自得意、狡黠坏笑的情绪，常用来表达窃喜或是心里藏着小想法的状态"
+    },
+    "tags": {
+      "en": [
+        "smug",
+        "smirk",
+        "pleased",
+        "sly",
+        "squint",
+        "tee-hee"
+      ],
+      "zh": [
+        "得意",
+        "坏笑",
+        "窃喜",
+        "狡黠"
+      ]
+    }
+  },
+  "heart-eyes-happy-smile.gif": {
+    "filename": "heart-eyes-happy-smile.gif",
+    "aiName": {
+      "en": "heart-eyes-happy-smile",
+      "zh": "爱心眼花痴笑"
+    },
+    "description": {
+      "en": "Heart-eyes happy face — for swooning over someone or something you adore.",
+      "zh": "用来表达看到喜欢的人或事物时，心动欢喜、充满爱慕的愉悦心情"
+    },
+    "tags": {
+      "en": [
+        "heart-eyes",
+        "love",
+        "crush",
+        "adore",
+        "swoon",
+        "smitten"
+      ],
+      "zh": [
+        "心动",
+        "喜爱",
+        "花痴",
+        "爱心眼"
+      ]
+    }
+  },
+  "ok-hand-gesture.gif": {
+    "filename": "ok-hand-gesture.gif",
+    "aiName": {
+      "en": "ok-hand-gesture",
+      "zh": "OK手势"
+    },
+    "description": {
+      "en": "An OK hand gesture — \"all set, no problem\", clean agreement and approval.",
+      "zh": "该贴纸比出OK手势，用来表示一切妥当没问题，传达同意、认可、肯定的情绪"
+    },
+    "tags": {
+      "en": [
+        "ok",
+        "approval",
+        "agreed",
+        "no-problem",
+        "good",
+        "confirmed"
+      ],
+      "zh": [
+        "OK手势",
+        "认可",
+        "没问题",
+        "肯定"
+      ]
+    }
+  },
+  "glowing-shocked-blue-cat.gif": {
+    "filename": "glowing-shocked-blue-cat.gif",
+    "aiName": {
+      "en": "glowing-shocked-blue-cat",
+      "zh": "发光震惊蓝猫"
+    },
+    "description": {
+      "en": "Blue cat glowing all over in shock — for moments of extreme disbelief and \"no way\" reaction.",
+      "zh": "蓝色小猫浑身发光，表情惊恐震惊，用来表达遇到意外事件后极度震惊、不敢相信的情绪"
+    },
+    "tags": {
+      "en": [
+        "shocked",
+        "glowing",
+        "disbelief",
+        "cat",
+        "no-way",
+        "stunned"
+      ],
+      "zh": [
+        "惊恐",
+        "震惊",
+        "发光",
+        "蓝猫",
+        "不敢相信"
+      ]
+    }
+  },
+  "worried-blue-face.gif": {
+    "filename": "worried-blue-face.gif",
+    "aiName": {
+      "en": "worried-blue-face",
+      "zh": "忧虑蓝脸"
+    },
+    "description": {
+      "en": "A worried blue face — for anxiety, cold-feet moments, or the \"heart going cold\" feeling when something bad hits.",
+      "zh": "该表情传递出担忧焦虑、心灰意冷的情绪，也可以用来形容感到寒冷，遭遇糟心事时心情低落"
+    },
+    "tags": {
+      "en": [
+        "worried",
+        "anxious",
+        "cold-feet",
+        "low",
+        "down",
+        "nervous"
+      ],
+      "zh": [
+        "担忧",
+        "焦虑",
+        "心凉",
+        "低落"
+      ]
+    }
+  },
+  "vampire-girl-fangs.gif": {
+    "filename": "vampire-girl-fangs.gif",
+    "aiName": {
+      "en": "vampire-girl-fangs",
+      "zh": "吸血鬼少女"
+    },
+    "description": {
+      "en": "A vampire girl with trademark fangs staring straight ahead — fitting for Halloween vibes or just offbeat energy.",
+      "zh": "该贴纸是女吸血鬼形象，露出吸血鬼标志性的尖牙，正脸直视前方，可用于万圣节相关聊天或者表达另类个性"
+    },
+    "tags": {
+      "en": [
+        "vampire",
+        "halloween",
+        "fangs",
+        "spooky",
+        "alt",
+        "goth"
+      ],
+      "zh": [
+        "吸血鬼",
+        "万圣节",
+        "尖牙",
+        "搞怪"
+      ]
+    }
+  },
+  "decorated-christmas-tree.gif": {
+    "filename": "decorated-christmas-tree.gif",
+    "aiName": {
+      "en": "decorated-christmas-tree",
+      "zh": "装饰圣诞树"
+    },
+    "description": {
+      "en": "A Christmas tree decked out in ornaments topped with a golden star — pure holiday cheer.",
+      "zh": "装饰满彩球、顶有金星的圣诞树，洋溢着圣诞节日氛围，传递圣诞节的欢乐祝福"
+    },
+    "tags": {
+      "en": [
+        "christmas",
+        "tree",
+        "holiday",
+        "festive",
+        "decorated",
+        "xmas"
+      ],
+      "zh": [
+        "圣诞节",
+        "圣诞树",
+        "节日装饰",
+        "圣诞祝福"
+      ]
+    }
+  },
+  "hungry-blue-cat-gimme-food.gif": {
+    "filename": "hungry-blue-cat-gimme-food.gif",
+    "aiName": {
+      "en": "hungry-blue-cat-gimme-food",
+      "zh": "饿肚子蓝猫"
+    },
+    "description": {
+      "en": "A chunky blue cat waving a paw — \"I'm hungry, feed me please\" begging energy.",
+      "zh": "圆滚滚的蓝色猫咪饿饿地摆手，表达肚子饿了想吃东西、求投喂的情绪"
+    },
+    "tags": {
+      "en": [
+        "hungry",
+        "feed-me",
+        "waving",
+        "cat",
+        "beg",
+        "food"
+      ],
+      "zh": [
+        "饿了",
+        "想吃",
+        "摆手",
+        "蓝猫",
+        "求投喂"
+      ]
+    }
+  },
+  "chubby-blue-cat-soft-smile.gif": {
+    "filename": "chubby-blue-cat-soft-smile.gif",
+    "aiName": {
+      "en": "chubby-blue-cat-soft-smile",
+      "zh": "胖蓝猫淡笑"
+    },
+    "description": {
+      "en": "A round blue cat with a soft little smile — radiating calm, contented chill vibes.",
+      "zh": "圆滚滚的蓝色小猫抿着淡笑，传递出平和轻松、悠闲满足的情绪"
+    },
+    "tags": {
+      "en": [
+        "chill",
+        "smile",
+        "cat",
+        "cozy",
+        "content",
+        "relaxed"
+      ],
+      "zh": [
+        "可爱猫猫",
+        "微笑",
+        "悠闲",
+        "治愈"
+      ]
+    }
+  },
+  "blue-cat-extreme-shock.gif": {
+    "filename": "blue-cat-extreme-shock.gif",
+    "aiName": {
+      "en": "blue-cat-extreme-shock",
+      "zh": "蓝猫极度震惊"
+    },
+    "description": {
+      "en": "Blue cat trembling with mouth wide open in shock — for big-news \"wait, WHAT?\" moments.",
+      "zh": "蓝猫浑身颤抖瞪大嘴，表现得知意外消息后极度震惊、大吃一惊、不敢置信的强烈情绪"
+    },
+    "tags": {
+      "en": [
+        "shocked",
+        "stunned",
+        "cat",
+        "no-way",
+        "surprise",
+        "wait-what"
+      ],
+      "zh": [
+        "震惊",
+        "惊讶",
+        "猫咪",
+        "吓一跳"
+      ]
+    }
+  },
+  "winking-tongue-out-face.gif": {
+    "filename": "winking-tongue-out-face.gif",
+    "aiName": {
+      "en": "winking-tongue-out-face",
+      "zh": "眨眼吐舌"
+    },
+    "description": {
+      "en": "A winking face with tongue out — pure playful mischief, perfect for teasing.",
+      "zh": "单眼眨眼吐出舌头，传递调皮搞怪的情绪，多用于开玩笑、俏皮捉弄的场景"
+    },
+    "tags": {
+      "en": [
+        "playful",
+        "wink",
+        "tongue-out",
+        "tease",
+        "silly",
+        "joke"
+      ],
+      "zh": [
+        "调皮",
+        "搞怪",
+        "眨眼",
+        "吐舌头",
+        "玩笑"
+      ]
+    }
+  },
+  "cute-ghost-tongue-out.gif": {
+    "filename": "cute-ghost-tongue-out.gif",
+    "aiName": {
+      "en": "cute-ghost-tongue-out",
+      "zh": "调皮小幽灵"
+    },
+    "description": {
+      "en": "A cute little ghost sticking its tongue out with arms spread wide — mischievous and playful.",
+      "zh": "可爱调皮的小幽灵吐着舌头张开手臂，传递出搞怪俏皮、捣蛋卖萌的情绪"
+    },
+    "tags": {
+      "en": [
+        "ghost",
+        "playful",
+        "tongue-out",
+        "cute",
+        "mischievous",
+        "boo"
+      ],
+      "zh": [
+        "搞怪",
+        "幽灵",
+        "调皮",
+        "卖萌"
+      ]
+    }
+  },
+  "blue-cat-cozy-sleep.gif": {
+    "filename": "blue-cat-cozy-sleep.gif",
+    "aiName": {
+      "en": "blue-cat-cozy-sleep",
+      "zh": "蓝猫盖被睡觉"
+    },
+    "description": {
+      "en": "Blue cat tucked under a blanket, fully at ease — perfect for lazy, sleepy, \"I'm off the clock\" vibes.",
+      "zh": "蓝色小猫盖着被子舒服躺卧，展现出慵懒放松、准备休息的惬意状态"
+    },
+    "tags": {
+      "en": [
+        "sleepy",
+        "cozy",
+        "cat",
+        "blanket",
+        "lazy",
+        "rest"
+      ],
+      "zh": [
+        "慵懒",
+        "睡觉",
+        "放松",
+        "可爱"
+      ]
+    }
+  },
+  "cute-blue-cat-peeking.gif": {
+    "filename": "cute-blue-cat-peeking.gif",
+    "aiName": {
+      "en": "cute-blue-cat-peeking",
+      "zh": "蓝猫偷看"
+    },
+    "description": {
+      "en": "A soft blue cat peeking out curiously — works for quiet lurking or a shy hello waiting for a reply.",
+      "zh": "软萌的蓝色小猫探出头偷看，传递好奇、默默围观的情绪，也可用于腼腆地打招呼等待回应"
+    },
+    "tags": {
+      "en": [
+        "peeking",
+        "cute",
+        "cat",
+        "curious",
+        "lurking",
+        "shy"
+      ],
+      "zh": [
+        "可爱猫猫",
+        "偷看",
+        "呆萌",
+        "好奇"
+      ]
+    }
+  },
+  "blue-cat-heart-smile.gif": {
+    "filename": "blue-cat-heart-smile.gif",
+    "aiName": {
+      "en": "blue-cat-heart-smile",
+      "zh": "蓝猫爱心笑"
+    },
+    "description": {
+      "en": "A tender, smitten smile — for when you're feeling all warm and mushy about someone or something.",
+      "zh": "表现了温柔心动、愉悦满足的情绪，传递出满满的喜爱之情"
+    },
+    "tags": {
+      "en": [
+        "love",
+        "smile",
+        "heart",
+        "happy",
+        "sweet",
+        "warm"
+      ],
+      "zh": [
+        "心动",
+        "可爱",
+        "开心",
+        "治愈"
+      ]
+    }
+  },
+  "cute-blue-cat-smile.gif": {
+    "filename": "cute-blue-cat-smile.gif",
+    "aiName": {
+      "en": "cute-blue-cat-smile",
+      "zh": "微笑蓝猫"
+    },
+    "description": {
+      "en": "A gentle smile on a soft blue cat — for contentment and easy good moods.",
+      "zh": "软萌的蓝色小猫带着淡淡微笑，传递出愉悦满足、平和放松的好心情"
+    },
+    "tags": {
+      "en": [
+        "cute",
+        "smile",
+        "cat",
+        "happy",
+        "content",
+        "wholesome"
+      ],
+      "zh": [
+        "可爱",
+        "微笑",
+        "治愈",
+        "开心"
+      ]
+    }
+  },
+  "smiling-crescent-moon-face.gif": {
+    "filename": "smiling-crescent-moon-face.gif",
+    "aiName": {
+      "en": "smiling-crescent-moon-face",
+      "zh": "微笑月牙"
+    },
+    "description": {
+      "en": "A personified crescent moon with a gentle smile — good for \"goodnight\" or nighttime calm vibes.",
+      "zh": "拟人化的弯月带着浅笑，可用来指代夜晚、表达晚安，传递出温和平静的氛围"
+    },
+    "tags": {
+      "en": [
+        "moon",
+        "smile",
+        "night",
+        "goodnight",
+        "calm",
+        "sleep"
+      ],
+      "zh": [
+        "月牙",
+        "微笑",
+        "拟人",
+        "夜晚",
+        "晚安"
+      ]
+    }
+  },
+  "blue-cat-proud-thumbs-up.gif": {
+    "filename": "blue-cat-proud-thumbs-up.gif",
+    "aiName": {
+      "en": "blue-cat-proud-thumbs-up",
+      "zh": "蓝猫竖拇指"
+    },
+    "description": {
+      "en": "A blue cat smiling and giving a thumbs-up — straightforward praise and approval.",
+      "zh": "蓝色猫咪微笑着竖大拇指，表达对他人的称赞与认可，传递肯定、满意的情绪"
+    },
+    "tags": {
+      "en": [
+        "thumbs-up",
+        "praise",
+        "approval",
+        "cat",
+        "good-job",
+        "like"
+      ],
+      "zh": [
+        "点赞",
+        "认可",
+        "称赞",
+        "满意"
+      ]
+    }
+  },
+  "full-water-jar.gif": {
+    "filename": "full-water-jar.gif",
+    "aiName": {
+      "en": "full-water-jar",
+      "zh": "满水玻璃罐"
+    },
+    "description": {
+      "en": "A glass jar full of water — gentle reminder to hydrate, or a signal that water's stocked and ready.",
+      "zh": "这是一只装满水的玻璃水罐，用来表达需要补充水分、或是已经备好充足饮用水，也可以指代日常喝水的需求"
+    },
+    "tags": {
+      "en": [
+        "water",
+        "hydrate",
+        "drink",
+        "jar",
+        "stay-hydrated",
+        "thirsty"
+      ],
+      "zh": [
+        "喝水",
+        "补水",
+        "储水",
+        "水杯"
+      ]
+    }
+  },
+  "crying-blue-cat.gif": {
+    "filename": "crying-blue-cat.gif",
+    "aiName": {
+      "en": "crying-blue-cat",
+      "zh": "大哭蓝猫"
+    },
+    "description": {
+      "en": "Blue cat wailing with tears streaming — for feeling hurt, wronged, or straight-up crashing out.",
+      "zh": "蓝色猫咪张大嘴巴泪流满面，用来表达十分委屈、难过崩溃的情绪"
+    },
+    "tags": {
+      "en": [
+        "crying",
+        "sad",
+        "upset",
+        "cat",
+        "wah",
+        "heartbroken"
+      ],
+      "zh": [
+        "哭泣",
+        "委屈",
+        "难过",
+        "崩溃"
+      ]
+    }
+  },
+  "blue-cat-nosebleed.gif": {
+    "filename": "blue-cat-nosebleed.gif",
+    "aiName": {
+      "en": "blue-cat-nosebleed",
+      "zh": "蓝猫犯花痴流鼻血"
+    },
+    "description": {
+      "en": "Blue cat with a nosebleed — classic anime-style reaction to something impossibly attractive or exciting.",
+      "zh": "蓝色小猫鼻血直流，用来表达看到令人心动的事物后激动犯花痴、鼻血止不住的心情"
+    },
+    "tags": {
+      "en": [
+        "nosebleed",
+        "smitten",
+        "crush",
+        "cat",
+        "anime-reaction",
+        "swoon"
+      ],
+      "zh": [
+        "犯花痴",
+        "流鼻血",
+        "心动",
+        "可爱小猫"
+      ]
+    }
+  },
+  "clapping-hands.gif": {
+    "filename": "clapping-hands.gif",
+    "aiName": {
+      "en": "clapping-hands",
+      "zh": "鼓掌"
+    },
+    "description": {
+      "en": "Clapping hands — applause, appreciation, and congratulations.",
+      "zh": "表示鼓掌喝彩，用来表达对他人的赞赏与认可，也可传递祝贺的情绪"
+    },
+    "tags": {
+      "en": [
+        "clap",
+        "applause",
+        "bravo",
+        "congrats",
+        "well-done",
+        "praise"
+      ],
+      "zh": [
+        "鼓掌",
+        "赞赏",
+        "祝贺",
+        "喝彩"
+      ]
+    }
+  },
+  "blue-cat-playing-guitar.gif": {
+    "filename": "blue-cat-playing-guitar.gif",
+    "aiName": {
+      "en": "blue-cat-playing-guitar",
+      "zh": "蓝猫弹吉他"
+    },
+    "description": {
+      "en": "Blue cat strumming a guitar casually — for easygoing, self-entertained chill vibes.",
+      "zh": "蓝色小猫悠闲地弹着吉他，传递出自娱自乐、享受音乐的放松惬意情绪"
+    },
+    "tags": {
+      "en": [
+        "guitar",
+        "music",
+        "chill",
+        "cat",
+        "relaxed",
+        "jam"
+      ],
+      "zh": [
+        "弹吉他",
+        "悠闲",
+        "惬意",
+        "自娱自乐"
+      ]
+    }
+  },
+  "shocked-trembling-blue-cat.gif": {
+    "filename": "shocked-trembling-blue-cat.gif",
+    "aiName": {
+      "en": "shocked-trembling-blue-cat",
+      "zh": "颤抖蓝猫"
+    },
+    "description": {
+      "en": "Blue cat mouth agape, body trembling — for extreme disbelief at something out of left field.",
+      "zh": "蓝色猫咪大张着嘴浑身颤抖，用来表达遇到出乎意料的事情时极度震惊、难以置信的情绪"
+    },
+    "tags": {
+      "en": [
+        "shocked",
+        "trembling",
+        "disbelief",
+        "cat",
+        "stunned",
+        "no-way"
+      ],
+      "zh": [
+        "震惊",
+        "发抖",
+        "难以置信",
+        "惊讶"
+      ]
+    }
+  },
+  "blue-cat-skeptical-stare.gif": {
+    "filename": "blue-cat-skeptical-stare.gif",
+    "aiName": {
+      "en": "blue-cat-skeptical-stare",
+      "zh": "蓝猫斜眼质疑"
+    },
+    "description": {
+      "en": "A side-eye stare conveying doubt and mild contempt — for when you disagree without having to say it.",
+      "zh": "表达对他人说法或行为的质疑、不满与不屑，传递出疑惑不服的情绪"
+    },
+    "tags": {
+      "en": [
+        "skeptical",
+        "side-eye",
+        "disapproval",
+        "cat",
+        "unimpressed",
+        "really"
+      ],
+      "zh": [
+        "质疑",
+        "不满",
+        "斜眼",
+        "猫猫",
+        "不屑"
+      ]
+    }
+  },
+  "happy-smiley-tongue-out.gif": {
+    "filename": "happy-smiley-tongue-out.gif",
+    "aiName": {
+      "en": "happy-smiley-tongue-out",
+      "zh": "吐舌开心笑"
+    },
+    "description": {
+      "en": "Squinty smile with tongue poking out — classic \"yum\" or \"I'm happy and being a goof\" face.",
+      "zh": "眯眼微笑吐出舌头，传递开心满足的情绪，常用来表达尝到美食、心情愉悦俏皮的感觉"
+    },
+    "tags": {
+      "en": [
+        "happy",
+        "yum",
+        "tongue-out",
+        "playful",
+        "tasty",
+        "content"
+      ],
+      "zh": [
+        "开心",
+        "满足",
+        "俏皮",
+        "美味"
+      ]
+    }
+  },
+  "monkey-cover-eyes.gif": {
+    "filename": "monkey-cover-eyes.gif",
+    "aiName": {
+      "en": "monkey-cover-eyes",
+      "zh": "捂眼猴子"
+    },
+    "description": {
+      "en": "Monkey covering its eyes while giggling — the \"I can't look / not watching\" embarrassment reaction.",
+      "zh": "猴子双手捂住眼睛偷笑，表达不好意思、羞于直视，或是不想看、逃避某些内容的尴尬情绪"
+    },
+    "tags": {
+      "en": [
+        "monkey",
+        "cover-eyes",
+        "embarrassed",
+        "cant-look",
+        "shy",
+        "cringe"
+      ],
+      "zh": [
+        "捂眼猴子",
+        "不好意思",
+        "不想看",
+        "尴尬"
+      ]
+    }
+  },
+  "loud-crying-face.gif": {
+    "filename": "loud-crying-face.gif",
+    "aiName": {
+      "en": "loud-crying-face",
+      "zh": "放声大哭"
+    },
+    "description": {
+      "en": "Uncontrollable bawling — works both for deep sadness and happy-tears intensity.",
+      "zh": "表现了忍不住放声大哭的状态，可以用来表达极度悲伤难过，也可以表达喜极而泣的强烈激动情绪"
+    },
+    "tags": {
+      "en": [
+        "crying",
+        "bawling",
+        "sad",
+        "tears",
+        "overwhelmed",
+        "sobbing"
+      ],
+      "zh": [
+        "大哭",
+        "流泪",
+        "悲伤",
+        "喜极而泣"
+      ]
+    }
+  },
+  "smiling-crescent-moon-v2.gif": {
+    "filename": "smiling-crescent-moon-v2.gif",
+    "aiName": {
+      "en": "smiling-crescent-moon-v2",
+      "zh": "微笑月亮"
+    },
+    "description": {
+      "en": "A smiling crescent moon — classic \"goodnight\" or late-night peaceful vibe.",
+      "zh": "拟人化的微笑弯月，常用来指代夜晚，传递晚安、宁静悠闲的情绪"
+    },
+    "tags": {
+      "en": [
+        "moon",
+        "night",
+        "smile",
+        "goodnight",
+        "calm",
+        "peaceful"
+      ],
+      "zh": [
+        "月亮",
+        "夜晚",
+        "微笑",
+        "晚安"
+      ]
+    }
+  },
+  "flying-brown-bat.gif": {
+    "filename": "flying-brown-bat.gif",
+    "aiName": {
+      "en": "flying-brown-bat",
+      "zh": "飞行蝙蝠"
+    },
+    "description": {
+      "en": "A cartoon brown bat flying with wings spread — spooky atmosphere fodder, especially fitting for Halloween.",
+      "zh": "这是一只展开双翼正在飞行的卡通棕色蝙蝠，可用来烘托阴森神秘的氛围，也常可用于万圣节相关内容中。"
+    },
+    "tags": {
+      "en": [
+        "bat",
+        "flying",
+        "halloween",
+        "spooky",
+        "cartoon",
+        "night"
+      ],
+      "zh": [
+        "蝙蝠",
+        "飞行",
+        "万圣节",
+        "卡通动物"
+      ]
+    }
+  },
+  "blue-cat-curled-up.gif": {
+    "filename": "blue-cat-curled-up.gif",
+    "aiName": {
+      "en": "blue-cat-curled-up",
+      "zh": "蓝猫蜷缩"
+    },
+    "description": {
+      "en": "Cat curled up hiding its face — for when you want to turtle up, avoid people, or socially-retreat.",
+      "zh": "小猫蜷缩埋起自己，表达想要躲起来、逃避外界，社恐不想面对事情的退缩情绪"
+    },
+    "tags": {
+      "en": [
+        "hiding",
+        "curled-up",
+        "introvert",
+        "avoid",
+        "withdrawn",
+        "cat"
+      ],
+      "zh": [
+        "蜷缩",
+        "逃避",
+        "社恐",
+        "躲起来"
+      ]
+    }
+  },
+  "blue-cat-butt-wiggle-love.gif": {
+    "filename": "blue-cat-butt-wiggle-love.gif",
+    "aiName": {
+      "en": "blue-cat-butt-wiggle-love",
+      "zh": "蓝猫撅屁股示爱"
+    },
+    "description": {
+      "en": "A blue cat butt-wiggling with hearts — affection + shameless cuteness in one.",
+      "zh": "可爱蓝色小猫撅起屁股带着红心，向对方撒娇示爱，表达满满的喜爱与好感"
+    },
+    "tags": {
+      "en": [
+        "cute",
+        "clingy",
+        "love",
+        "cat",
+        "wiggle",
+        "affection"
+      ],
+      "zh": [
+        "可爱猫咪",
+        "撒娇",
+        "示爱",
+        "卖萌"
+      ]
+    }
+  },
+  "bunny-full-of-love.gif": {
+    "filename": "bunny-full-of-love.gif",
+    "aiName": {
+      "en": "bunny-full-of-love",
+      "zh": "爱心小兔"
+    },
+    "description": {
+      "en": "A soft critter surrounded by floating hearts — pure overflowing adoration.",
+      "zh": "软萌小动物趴着，周围飘满爱心，表达满溢出来的喜爱与心动，传递满满的爱意和欢喜"
+    },
+    "tags": {
+      "en": [
+        "love",
+        "hearts",
+        "bunny",
+        "adore",
+        "affection",
+        "smitten"
+      ],
+      "zh": [
+        "心动",
+        "喜爱",
+        "爱意",
+        "软萌"
+      ]
+    }
+  },
+  "blue-cat-shy-blush.gif": {
+    "filename": "blue-cat-shy-blush.gif",
+    "aiName": {
+      "en": "blue-cat-shy-blush",
+      "zh": "蓝猫害羞脸红"
+    },
+    "description": {
+      "en": "Blue cat blushing shyly — for flustered, \"I can't believe you said that\" shy-smitten moments.",
+      "zh": "蓝小猫满脸红晕一脸娇羞，表达对人心动爱慕、害羞喜欢的情绪"
+    },
+    "tags": {
+      "en": [
+        "shy",
+        "blush",
+        "smitten",
+        "cat",
+        "flustered",
+        "awww"
+      ],
+      "zh": [
+        "害羞",
+        "心动",
+        "爱慕",
+        "脸红"
+      ]
+    }
+  },
+  "shocked-frizzy-blue-cat.gif": {
+    "filename": "shocked-frizzy-blue-cat.gif",
+    "aiName": {
+      "en": "shocked-frizzy-blue-cat",
+      "zh": "炸毛蓝猫"
+    },
+    "description": {
+      "en": "Blue cat fur standing on end in pure shock — for completely unexpected events that leave you speechless.",
+      "zh": "表现了遭遇意外后极度震惊，整个人都吓得炸毛、目瞪口呆的惊愕情绪，可用于表达遇到出乎意料事件时的反应"
+    },
+    "tags": {
+      "en": [
+        "shocked",
+        "frizzy",
+        "startled",
+        "cat",
+        "stunned",
+        "what-the"
+      ],
+      "zh": [
+        "震惊",
+        "炸毛",
+        "惊吓",
+        "惊愕"
+      ]
+    }
+  },
+  "wide-eyes-up-stare.gif": {
+    "filename": "wide-eyes-up-stare.gif",
+    "aiName": {
+      "en": "wide-eyes-up-stare",
+      "zh": "向上睁眼发呆"
+    },
+    "description": {
+      "en": "Eyes wide, looking upward, mouth slightly open — for blank speechlessness and \"wait, really?\" confusion.",
+      "zh": "双眼向上睁大、嘴巴微张，一脸茫然，用来表达无语、发呆、意外错愕或是疑惑的情绪"
+    },
+    "tags": {
+      "en": [
+        "dazed",
+        "speechless",
+        "blank",
+        "stunned",
+        "really",
+        "huh"
+      ],
+      "zh": [
+        "茫然",
+        "无语",
+        "发呆",
+        "错愕"
+      ]
+    }
+  },
+  "blue-frog-blank-stare.gif": {
+    "filename": "blue-frog-blank-stare.gif",
+    "aiName": {
+      "en": "blue-frog-blank-stare",
+      "zh": "蓝蛙放空"
+    },
+    "description": {
+      "en": "A blank, expressionless stare — for zoning out, feigning indifference, or just having no words.",
+      "zh": "呈现出放空发呆、面无表情的平淡状态，可用来表达无语、发呆摸鱼或者没有情绪的心情"
+    },
+    "tags": {
+      "en": [
+        "blank",
+        "stare",
+        "expressionless",
+        "frog",
+        "zoned-out",
+        "meh"
+      ],
+      "zh": [
+        "发呆",
+        "面无表情",
+        "可爱卡通",
+        "无语"
+      ]
+    }
+  },
+  "angry-frowning-face.gif": {
+    "filename": "angry-frowning-face.gif",
+    "aiName": {
+      "en": "angry-frowning-face",
+      "zh": "皱眉生气"
+    },
+    "description": {
+      "en": "A frown communicating annoyance and displeasure — for venting mild to moderate anger.",
+      "zh": "这个表情传达了愤怒、不悦的情绪，用来抒发自己生气、不满的心情"
+    },
+    "tags": {
+      "en": [
+        "angry",
+        "frown",
+        "displeased",
+        "upset",
+        "grumpy",
+        "annoyed"
+      ],
+      "zh": [
+        "愤怒",
+        "生气",
+        "不满",
+        "皱眉",
+        "情绪"
+      ]
+    }
+  },
+  "sweating-trembling-blue-cat.gif": {
+    "filename": "sweating-trembling-blue-cat.gif",
+    "aiName": {
+      "en": "sweating-trembling-blue-cat",
+      "zh": "颤抖流汗蓝猫"
+    },
+    "description": {
+      "en": "Blue cat trembling, mouth agape, drenched in cold sweat — peak jump-scare reaction.",
+      "zh": "该贴纸刻画了蓝色小猫浑身发抖、大汗淋漓、大张嘴受惊的样子，用来表达受到突发惊吓后极度震惊、恐慌不敢相信的情绪"
+    },
+    "tags": {
+      "en": [
+        "scared",
+        "sweating",
+        "trembling",
+        "cat",
+        "panic",
+        "jump-scared"
+      ],
+      "zh": [
+        "震惊",
+        "惊吓",
+        "发抖",
+        "流汗"
+      ]
+    }
+  },
+  "black-pixel-spider.gif": {
+    "filename": "black-pixel-spider.gif",
+    "aiName": {
+      "en": "black-pixel-spider",
+      "zh": "像素黑蜘蛛"
+    },
+    "description": {
+      "en": "A pixel-art black spider — creepy-crawly vibes, perfect for horror or Halloween contexts.",
+      "zh": "一只像素风格的黑蜘蛛，用来传递毛骨悚然的恐惧感，多用于恐怖或万圣节相关场景"
+    },
+    "tags": {
+      "en": [
+        "spider",
+        "scary",
+        "halloween",
+        "pixel-art",
+        "creepy",
+        "crawly"
+      ],
+      "zh": [
+        "黑蜘蛛",
+        "恐怖",
+        "万圣节",
+        "像素风"
+      ]
+    }
+  },
+  "blue-confused-cat.gif": {
+    "filename": "blue-confused-cat.gif",
+    "aiName": {
+      "en": "blue-confused-cat",
+      "zh": "困惑蓝猫"
+    },
+    "description": {
+      "en": "A round light-blue cat with a downturned mouth, bewildered — for feeling completely at a loss.",
+      "zh": "圆乎乎的浅蓝色小猫嘴角下撇，一脸茫然疑惑，用来表达不知所措、摸不着头脑的情绪"
+    },
+    "tags": {
+      "en": [
+        "confused",
+        "bewildered",
+        "cat",
+        "lost",
+        "puzzled",
+        "what-do-i-do"
+      ],
+      "zh": [
+        "茫然",
+        "困惑",
+        "不知所措",
+        "可爱猫猫"
+      ]
+    }
+  },
+  "laugh-crying-tears.gif": {
+    "filename": "laugh-crying-tears.gif",
+    "aiName": {
+      "en": "laugh-crying-tears",
+      "zh": "笑到流泪"
+    },
+    "description": {
+      "en": "Laughing so hard tears stream down — for when something's so funny you lose it completely.",
+      "zh": "表达遇到极度好笑的事情，开心到笑出眼泪，传递出爆笑到失控的欢乐情绪"
+    },
+    "tags": {
+      "en": [
+        "laugh",
+        "crying-laugh",
+        "lol",
+        "tears",
+        "hilarious",
+        "cant-breathe"
+      ],
+      "zh": [
+        "笑哭",
+        "笑到流泪",
+        "开心",
+        "爆笑"
+      ]
+    }
+  },
+  "wink-tongue-smiley.gif": {
+    "filename": "wink-tongue-smiley.gif",
+    "aiName": {
+      "en": "wink-tongue-smiley",
+      "zh": "眨眼吐舌笑"
+    },
+    "description": {
+      "en": "Playful wink + tongue-out combo — for jokes, goofing around, and post-prank satisfaction.",
+      "zh": "该表情传递调皮搞怪、俏皮顽皮的情绪，常用于开玩笑、卖萌，或是表达恶作剧后的愉悦心情"
+    },
+    "tags": {
+      "en": [
+        "playful",
+        "wink",
+        "tongue-out",
+        "cheeky",
+        "joke",
+        "silly"
+      ],
+      "zh": [
+        "调皮",
+        "搞怪",
+        "俏皮",
+        "开心"
+      ]
+    }
+  },
+  "cxk-silhouette-basketball-dance.gif": {
+    "filename": "cxk-silhouette-basketball-dance.gif",
+    "aiName": {
+      "en": "cxk-silhouette-basketball-dance",
+      "zh": "蔡徐坤篮球剪影"
+    },
+    "description": {
+      "en": "Cai Xukun's iconic basketball-dance silhouette meme — \"one more look and I'll explode\". The essence of cursed Chinese internet culture, for unhinged or \"going off the rails\" energy.",
+      "zh": "蔡徐坤经典鬼畜跳舞剪影，再多看一眼就会爆炸，篮球、鸡你太美梗的灵魂表情包，表达魔性洗脑、放飞自我的情绪"
+    },
+    "tags": {
+      "en": [
+        "cursed",
+        "meme",
+        "basketball",
+        "dance",
+        "cxk",
+        "chaotic",
+        "jinitaimei"
+      ],
+      "zh": [
+        "蔡徐坤",
+        "鬼畜",
+        "篮球",
+        "鸡你太美",
+        "魔性跳舞",
+        "放飞自我"
+      ]
+    }
   }
 }
