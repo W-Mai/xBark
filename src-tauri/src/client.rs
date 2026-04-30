@@ -317,3 +317,58 @@ fn autostart_macos(action: AutostartAction) -> Result<()> {
     }
     Ok(())
 }
+
+/// Interactive first-run walkthrough.
+///
+/// Runs when the user types `xbark` with no subcommand. We:
+///   1. Describe what xbark does in one paragraph.
+///   2. Auto-spawn the daemon if it isn't running (that also unpacks
+///      the bundled sticker pack on first use).
+///   3. Fire a demo sticker so they see something immediately.
+///   4. Print the 5 most useful commands.
+pub fn welcome() -> Result<()> {
+    println!();
+    println!("  ✨ \x1b[1mxBark\x1b[0m — desktop sticker popups from anywhere");
+    println!();
+    println!("     A small daemon that draws its own popups: large, animated,");
+    println!("     macOS-Spaces-aware, click-through. Talk to it over HTTP from");
+    println!("     any script — or embed :sticker[keyword]: in AI replies.");
+    println!();
+
+    let was_running = matches!(read_port(), Some(_));
+    if !was_running {
+        println!("  → starting daemon for the first time…");
+    }
+
+    if let Err(e) = ensure_daemon_running() {
+        eprintln!("  ✗ could not start daemon: {}", e);
+        eprintln!();
+        eprintln!("    you can retry with: xbark daemon --debug");
+        return Ok(());
+    }
+
+    println!("  → sending you a sticker right now…");
+    println!();
+
+    // Fire a demo sticker. Swallow errors — it's just a greeting.
+    let body = serde_json::json!({
+        "keyword": "smiling-man-thumbs-up",
+        "duration": 4.0,
+    });
+    let _ = rt().block_on(http_post("/sticker", body));
+
+    println!("  👀 look at the bottom-right of your screen.");
+    println!();
+    println!("  \x1b[1mNext, try:\x1b[0m");
+    println!();
+    println!("    xbark send 点赞                   fire a sticker by keyword");
+    println!("    xbark list                        browse all 82 bundled stickers");
+    println!("    xbark send 拿捏 --duration 5      override display time");
+    println!("    xbark autostart install           run at login (macOS)");
+    println!("    xbark --help                      see every subcommand");
+    println!();
+    println!("  daemon is running on port {}.", read_port().unwrap_or(0));
+    println!("  stop it anytime with: xbark stop");
+    println!();
+    Ok(())
+}

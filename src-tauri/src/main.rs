@@ -17,14 +17,22 @@ mod server;
 use cli_types::AutostartAction;
 
 #[derive(Parser)]
-#[command(name = "xbark", version, about = "Desktop sticker popup daemon")]
+#[command(
+    name = "xbark",
+    version,
+    about = "Desktop sticker popup daemon",
+    long_about = "xBark — fire a desktop sticker popup from anywhere.\n\nRun without arguments for an interactive tour."
+)]
 struct Cli {
+    /// Subcommand. If omitted, runs `welcome` (interactive tour).
     #[command(subcommand)]
-    command: Command,
+    command: Option<Command>,
 }
 
 #[derive(Subcommand)]
 enum Command {
+    /// Interactive first-run walkthrough
+    Welcome,
     /// Run the xBark daemon (foreground)
     Daemon {
         /// Port to listen on (0 = random, default from config)
@@ -76,8 +84,10 @@ fn main() -> Result<()> {
         .init();
 
     let cli = Cli::parse();
+    let command = cli.command.unwrap_or(Command::Welcome);
 
-    match cli.command {
+    match command {
+        Command::Welcome => client::welcome(),
         Command::Daemon { port, debug } => {
             if debug {
                 // Propagate as env var since overlay.rs checks XBARK_DEBUG
