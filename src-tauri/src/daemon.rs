@@ -87,6 +87,7 @@ pub fn run(port_override: Option<u16>) -> Result<()> {
     let config_dir_for_app = config_dir.clone();
 
     tauri::Builder::default()
+        .invoke_handler(tauri::generate_handler![frontend_ready])
         .setup(move |app| {
             // Create overlay window
             if let Err(e) = overlay::create_overlay(&app.handle()) {
@@ -181,4 +182,11 @@ impl<F: FnOnce()> Drop for ScopeGuard<F> {
             f();
         }
     }
+}
+
+/// Invoked by the overlay webview once its event listeners are wired.
+/// Any stickers that arrived during startup get flushed.
+#[tauri::command]
+fn frontend_ready(app: tauri::AppHandle) {
+    overlay::mark_frontend_ready(&app);
 }

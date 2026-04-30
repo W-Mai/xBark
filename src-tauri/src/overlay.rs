@@ -1,12 +1,67 @@
 // Overlay window management.
 // A single full-screen transparent, click-through, always-on-top webview
 // hosts all sticker popups. We communicate with the frontend via Tauri events.
+//
+// Readiness protocol
+// ------------------
+// There's a race between the HTTP server accepting requests and the webview
+// finishing HTML/JS load + wiring `window.__TAURI__.event.listen`. During
+// that window, any `emit_to("sticker:show")` we fire gets dropped by the
+// webview runtime (no listener yet) and the sticker silently never renders.
+//
+// To handle this reliably:
+//   1. The frontend, once its listener is attached, invokes the Tauri
+//      command `frontend_ready`. That sets a process-wide AtomicBool.
+//   2. `show_sticker` checks the flag. If ready, emit immediately. If not
+//      yet ready, the payload is pushed onto a bounded in-memory queue
+//      (capped at MAX_PENDING — old entries get dropped, newest wins).
+//   3. When `frontend_ready` fires, we drain the queue and emit everything
+//      that was waiting.
+//
+// This also shields against any future transient "frontend went away"
+// scenarios (webview crash, devtools reload, etc.).
 
 use anyhow::{Context, Result};
 use serde::{Deserialize, Serialize};
+use std::sync::atomic::{AtomicBool, Ordering};
+use std::sync::Mutex;
 use tauri::{AppHandle, Emitter, Manager, WebviewUrl, WebviewWindowBuilder};
 
 pub const OVERLAY_LABEL: &str = "overlay";
+
+/// Has the frontend registered its event listeners?
+static FRONTEND_READY: AtomicBool = AtomicBool::new(false);
+
+/// Bounded queue of stickers received before the frontend was ready.
+const MAX_PENDING: usize = 20;
+static PENDING: Mutex<Vec<StickerPayload>> = Mutex::new(Vec::new());
+
+pub fn is_frontend_ready() -> bool {
+    FRONTEND_READY.load(Ordering::Acquire)
+}
+
+/// Invoked by the frontend once its event listeners are wired.
+/// Drains any pending stickers that were enqueued during startup.
+pub fn mark_frontend_ready(app: &AppHandle) {
+    let was_ready = FRONTEND_READY.swap(true, Ordering::AcqRel);
+    if was_ready {
+        return;
+    }
+    let pending = {
+        let mut q = PENDING.lock().expect("pending mutex poisoned");
+        std::mem::take(&mut *q)
+    };
+    if !pending.is_empty() {
+        tracing::info!("frontend ready — flushing {} pending stickers", pending.len());
+    } else {
+        tracing::info!("frontend ready");
+    }
+    for payload in pending {
+        if let Err(e) = app.emit_to(OVERLAY_LABEL, "sticker:show", &payload) {
+            tracing::warn!("failed to emit queued sticker: {}", e);
+        }
+    }
+}
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct StickerPayload {
@@ -133,7 +188,7 @@ pub fn create_overlay(app: &AppHandle) -> Result<()> {
     Ok(())
 }
 
-/// Show a sticker via event. The frontend listens for `sticker:show` events.
+/// Show a sticker via event. If the frontend isn't ready yet, queue it.
 pub fn show_sticker(app: &AppHandle, payload: StickerPayload) -> Result<()> {
     let window = app
         .get_webview_window(OVERLAY_LABEL)
@@ -143,7 +198,21 @@ pub fn show_sticker(app: &AppHandle, payload: StickerPayload) -> Result<()> {
         window.show()?;
     }
 
-    app.emit_to(OVERLAY_LABEL, "sticker:show", &payload)?;
+    if is_frontend_ready() {
+        app.emit_to(OVERLAY_LABEL, "sticker:show", &payload)?;
+    } else {
+        let mut q = PENDING.lock().expect("pending mutex poisoned");
+        if q.len() >= MAX_PENDING {
+            // Drop oldest to keep memory bounded
+            q.remove(0);
+        }
+        q.push(payload);
+        tracing::debug!(
+            "frontend not ready, queued sticker (pending={}, cap={})",
+            q.len(),
+            MAX_PENDING
+        );
+    }
     Ok(())
 }
 

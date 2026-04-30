@@ -154,24 +154,38 @@ function maybeHide() {
 
 // ---- Tauri event wiring ----
 // In Tauri v2 with withGlobalTauri=true, event.listen is exposed via
-// window.__TAURI__.event, injected async after HTML parses. Poll until ready.
-function wireEvents(attempt = 0) {
+// window.__TAURI__.event, injected async after HTML parses. Poll until
+// ready, THEN register listeners, THEN invoke `frontend_ready` so the
+// Rust side knows it's safe to emit / can flush any queued stickers.
+async function wireEvents(attempt = 0) {
   const tauri = window.__TAURI__;
-  if (!tauri || !tauri.event || !tauri.event.listen) {
+  if (!tauri || !tauri.event || !tauri.event.listen || !tauri.core || !tauri.core.invoke) {
     if (attempt > 200) {
-      console.error("[xbark] __TAURI__.event never appeared after 10s");
+      console.error("[xbark] __TAURI__ never fully appeared after 10s");
       return;
     }
     setTimeout(() => wireEvents(attempt + 1), 50);
     return;
   }
-  tauri.event.listen("sticker:show", (ev) => {
-    showSticker(ev.payload);
-  });
-  tauri.event.listen("sticker:clear", () => {
-    clearAll();
-  });
-  console.log("[xbark] event wiring ready");
+
+  try {
+    // Register listeners and await the returned Promises so they're truly
+    // attached before we tell Rust we're ready. Otherwise an event emitted
+    // between our call and the internal listener registration still drops.
+    await tauri.event.listen("sticker:show", (ev) => {
+      showSticker(ev.payload);
+    });
+    await tauri.event.listen("sticker:clear", () => {
+      clearAll();
+    });
+
+    // Signal the Rust side. It may have queued stickers while we were
+    // loading — those flush now.
+    await tauri.core.invoke("frontend_ready");
+    console.log("[xbark] event wiring ready; frontend_ready invoked");
+  } catch (err) {
+    console.error("[xbark] wiring failed:", err);
+  }
 }
 
 wireEvents();
