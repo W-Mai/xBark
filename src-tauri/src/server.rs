@@ -172,14 +172,36 @@ async fn send_sticker(
         .position
         .unwrap_or_else(|| state.config.position.clone());
 
+    // For the overlay payload we flatten bilingual → prefer zh for
+    // description (richer), en for aiName (canonical).
     let payload = StickerPayload {
         id: id.clone(),
         image_url,
         duration_ms,
         size,
         position,
-        description: sticker_meta.as_ref().map(|m| m.description.clone()).unwrap_or_default(),
-        ai_name: sticker_meta.as_ref().map(|m| m.ai_name.clone()).unwrap_or_default(),
+        description: sticker_meta
+            .as_ref()
+            .map(|m| {
+                let z = m.description.zh();
+                if !z.is_empty() {
+                    z.to_string()
+                } else {
+                    m.description.en().to_string()
+                }
+            })
+            .unwrap_or_default(),
+        ai_name: sticker_meta
+            .as_ref()
+            .map(|m| {
+                let e = m.ai_name.en();
+                if !e.is_empty() {
+                    e.to_string()
+                } else {
+                    m.ai_name.zh().to_string()
+                }
+            })
+            .unwrap_or_default(),
     };
 
     if let Err(e) = overlay::show_sticker(&state.app_handle, payload) {
