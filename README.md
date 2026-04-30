@@ -73,41 +73,42 @@ xbark autostart install
 
 ## 📦 Installation
 
-> 🚧 **v0.1.0 is source-only.** Pre-built binaries + `brew install` arrive in v0.1.1 via [cargo-dist](https://opensource.axo.dev/cargo-dist/). See [`docs/RELEASING.md`](./docs/RELEASING.md) for the roadmap.
+macOS only (for now). Pick one:
+
+### Homebrew (recommended)
+
+```bash
+brew install W-Mai/cellar/xbark
+```
+
+### Shell installer
+
+```bash
+curl --proto '=https' --tlsv1.2 -LsSf \
+  https://github.com/W-Mai/xBark/releases/latest/download/xbark-installer.sh | sh
+```
 
 ### From source
 
-Prerequisites:
-- [Rust toolchain](https://www.rust-lang.org/tools/install) (1.77+)
-- macOS (Windows / Linux are on the roadmap)
+Prerequisites: [Rust toolchain](https://www.rust-lang.org/tools/install) (1.77+).
 
 ```bash
 git clone https://github.com/W-Mai/xBark
 cd xBark
-cargo build --release --manifest-path src-tauri/Cargo.toml
+cargo xtask build       # or: cargo build --release -p xbark
+cp target/release/xbark ~/.cargo/bin/
 ```
 
-Drop the binary anywhere on your `PATH`:
+### After install
+
+That's it — run `xbark` with no arguments for a quick tour, or jump straight in:
 
 ```bash
-cp target/release/xbark ~/.local/bin/
-# or
-ln -s "$(pwd)/target/release/xbark" ~/.bun/bin/xbark
+xbark send 点赞              # daemon auto-spawns; sticker pack auto-unpacks
+xbark autostart install      # run at login (macOS launchd)
 ```
 
-### Coming soon
-
-```bash
-# Homebrew
-brew install W-Mai/tap/xbark
-
-# Shell installer
-curl --proto '=https' --tlsv1.2 -LsSf \
-  https://github.com/W-Mai/xBark/releases/latest/download/xbark-installer.sh | sh
-
-# cargo-binstall
-cargo binstall xbark
-```
+Windows & Linux ports are on the roadmap — the Tauri overlay primitives port cleanly, just not tested yet.
 
 ## 🛠️ Configuration
 

@@ -1,175 +1,82 @@
 # Releasing xBark
 
-This document captures the full release/distribution plan so future-me doesn't have to rediscover it.
-
-Status: v0.1.0 shipped as source-only. Everything below is the TODO for v0.1.1+.
-
----
-
-## Big picture
-
-Four user-facing install paths, in priority order:
-
-1. `brew install w-mai/tap/xbark` — the default path for mac users
-2. `curl | sh` shell installer from GitHub releases
-3. `cargo binstall xbark` — for rust users, no source build
-4. `cargo install --git …` — absolute worst-case fallback
-
-All four share the same artifacts: GitHub Release assets produced by **cargo-dist** in CI.
-
-```
-┌──────────────┐   git tag vX.Y.Z   ┌──────────────────┐
-│  local dev   │ ─────────────────▶ │  GitHub Actions  │
-└──────────────┘                    │  (cargo-dist)    │
-                                    └────────┬─────────┘
-                                             │
-                   ┌─────────────────────────┼──────────────────────────┐
-                   ▼                         ▼                          ▼
-          ┌────────────────┐       ┌──────────────────┐      ┌──────────────────┐
-          │ Release assets │       │ homebrew-tap     │      │ install shell    │
-          │ (.tar.gz per   │       │  auto-commit     │      │  auto-served     │
-          │  platform)     │       │  formula         │      │                  │
-          └────────────────┘       └──────────────────┘      └──────────────────┘
-```
+Status as of v0.1.2 — cargo-dist pipeline live, brew + shell installer verified,
+bundled sticker pack embedded. This document describes how to cut a release
+and what bits are still TODO.
 
 ---
 
-## Step-by-step for v0.1.1
-
-### 1. Set up a Homebrew tap repo
-
-One-time:
+## One-minute release
 
 ```bash
-gh repo create W-Mai/homebrew-tap --public \
-  --description "Homebrew formulae for W-Mai projects"
-```
+# 1. Bump version (syncs Cargo.toml + tauri.conf.json + Cargo.lock)
+cargo xtask bump patch        # or minor / major
 
-The naming convention is important: `<user>/homebrew-<anything>`. The `homebrew-` prefix lets users write `brew tap W-Mai/tap` (Homebrew strips the prefix).
-
-### 2. Install cargo-dist
-
-```bash
-cargo install cargo-dist
-# or from homebrew:
-brew install axodotdev/tap/cargo-dist
-```
-
-### 3. Initialise cargo-dist config
-
-```bash
-cd ~/Projects/xBark
-cargo dist init
-```
-
-This will interactively ask:
-- Which platforms: pick `aarch64-apple-darwin`, `x86_64-apple-darwin`. Add Linux + Windows later
-- Which installers: pick `shell` and `homebrew`
-- Homebrew tap: `W-Mai/homebrew-tap`
-- CI: yes, GitHub
-
-It generates:
-- `dist-workspace.toml` — config
-- `.github/workflows/release.yml` — CI definition
-- Adds a `[workspace.metadata.dist]` section to `Cargo.toml`
-
-**Tauri caveat**: cargo-dist by default builds the package's default binary. xBark's binary is at `src-tauri/` subpackage, which is the workspace member — this should work out of the box, but the frontend files in `src/` must be embedded at build time (they already are, via `tauri::generate_context!`). Verify `cargo build --release` from scratch on a clean CI runner produces a working binary.
-
-If Tauri's build requires extra system deps (e.g. webkit on Linux), cargo-dist needs a `build-local-artifacts` hook or GitHub Actions setup step. See https://opensource.axo.dev/cargo-dist/book/quickstart/rust.html
-
-### 4. First release
-
-```bash
-# bump version in src-tauri/Cargo.toml to 0.1.1
-# (also root Cargo.toml workspace.package.version)
-
+# 2. Commit the bump
 git add -A
-git commit -m "🔖(release): bump to 0.1.1"
-git tag v0.1.1
-git push origin main v0.1.1
+git commit -m "🔖(release): bump to X.Y.Z"
+
+# 3. Push + tag + trigger CI
+cargo xtask release
 ```
 
-CI will:
-1. Build binaries for each target platform in parallel
-2. Package them with the `xbark-installer.sh` wrapper
-3. Upload as GitHub Release assets
-4. Commit the new Homebrew formula to `W-Mai/homebrew-tap/Formula/xbark.rb`
+`cargo xtask release` refuses if the working tree is dirty or you're not on main.
 
-### 5. Test the install paths
+The release workflow (cargo-dist) then:
 
-On a fresh machine (or inside a clean Docker on Linux):
+1. Builds binaries for `aarch64-apple-darwin` + `x86_64-apple-darwin`
+2. Generates `xbark-installer.sh` (shell installer) + `xbark.rb` (Homebrew formula)
+3. Uploads all artifacts to the GitHub Release
+4. Pushes the new formula to `W-Mai/homebrew-cellar`
 
-```bash
-# Path 1: homebrew
-brew tap W-Mai/tap
-brew install xbark
-xbark --version
+Users then get the update via:
 
-# Path 2: shell installer
-curl --proto '=https' --tlsv1.2 -LsSf \
-  https://github.com/W-Mai/xBark/releases/download/v0.1.1/xbark-installer.sh | sh
+- `brew upgrade w-mai/cellar/xbark`
+- or the shell installer (always serves `latest/download/xbark-installer.sh`)
 
-# Path 3: cargo-binstall (after cargo-dist generates the required metadata)
-cargo binstall xbark
-
-# Path 4: cargo install (fallback, compiles from source)
-cargo install --git https://github.com/W-Mai/xBark --tag v0.1.1 xbark
-```
-
-### 6. Update README with install instructions
-
-```markdown
-## Install
-
-### Homebrew (macOS)
-\`\`\`bash
-brew install w-mai/tap/xbark
-\`\`\`
-
-### Shell installer
-\`\`\`bash
-curl --proto '=https' --tlsv1.2 -LsSf \
-  https://github.com/W-Mai/xBark/releases/latest/download/xbark-installer.sh | sh
-\`\`\`
-
-### From source
-\`\`\`bash
-cargo install --git https://github.com/W-Mai/xBark
-\`\`\`
-```
+Watch progress at https://github.com/W-Mai/xBark/actions
 
 ---
 
-## Version bump checklist
+## Install paths (verified working)
 
-Every release should touch these places (TODO: script it):
-
-- [ ] `Cargo.toml` — `workspace.package.version`
-- [ ] `src-tauri/tauri.conf.json` — `version`
-- [ ] `src-tauri/Cargo.toml` — not needed (inherits from workspace)
-- [ ] `CHANGELOG.md` — add entry (not yet created)
-- [ ] Run `cargo build --release` to refresh `Cargo.lock`
-- [ ] Commit: `🔖(release): bump to X.Y.Z`
-- [ ] Tag: `git tag vX.Y.Z`
-- [ ] Push: `git push origin main vX.Y.Z`
+| Path | Status | Command |
+|------|--------|---------|
+| Homebrew | ✅ | `brew install W-Mai/cellar/xbark` |
+| Shell installer | ✅ | `curl -LsSf https://github.com/W-Mai/xBark/releases/latest/download/xbark-installer.sh \| sh` |
+| From source | ✅ | `git clone … && cargo xtask build` |
+| cargo-binstall | 📋 not yet configured | `cargo binstall xbark` |
 
 ---
 
-## Signing / notarisation (macOS)
+## Code signing / notarization (NOT doing for now)
 
-Unsigned binaries on macOS show the scary "can't be opened" warning. To fix:
+macOS Gatekeeper's "can't be opened — unknown developer" dialog only fires
+when the binary is launched through a path that attaches a
+`com.apple.quarantine` extended attribute. The three paths above **do not
+attach quarantine**:
 
-1. Enrol in [Apple Developer Program](https://developer.apple.com/programs/) ($99/year) — probably not worth it for a sticker tool
-2. Generate a "Developer ID Application" certificate
-3. Give cargo-dist your signing identity + Apple ID app-specific password via GitHub secrets:
-   - `APPLE_CERTIFICATE` (base64 p12)
-   - `APPLE_CERTIFICATE_PASSWORD`
-   - `APPLE_ID`
-   - `APPLE_APP_PASSWORD`
-   - `APPLE_TEAM_ID`
-4. cargo-dist will `codesign` + `notarytool submit` automatically
+- **Homebrew** strips it automatically via `xattr -d` in the install hook
+- **Shell installer** downloads via `curl`, which doesn't attach quarantine
+- **`cargo build`** from source never touches quarantine
 
-**Alternative**: tell users to `xattr -d com.apple.quarantine $(which xbark)` after install. Ugly but free.
+That means we do NOT need Apple Developer ID signing (~$99/year) right now.
+
+**Quarantine would become a problem** if we:
+- Distributed a `.dmg` for Finder drag-and-drop
+- Distributed a `.app` bundle intended for non-technical users double-clicking
+- Published to the Mac App Store
+
+When that day comes, cargo-dist supports passing Apple signing credentials
+via these secrets in the xBark repo:
+
+- `APPLE_CERTIFICATE` (base64-encoded `.p12`)
+- `APPLE_CERTIFICATE_PASSWORD`
+- `APPLE_ID`
+- `APPLE_APP_PASSWORD`
+- `APPLE_TEAM_ID`
+
+cargo-dist will then `codesign` + `notarytool submit` transparently.
 
 ---
 
@@ -177,16 +84,52 @@ Unsigned binaries on macOS show the scary "can't be opened" warning. To fix:
 
 | Platform | Status | Notes |
 |----------|--------|-------|
-| macOS aarch64 | ✅ works | primary target, tested |
-| macOS x86_64 | ⚠️ untested | should work, Tauri v2 supports it |
-| Linux x86_64 | ❌ untested | needs `webkit2gtk-4.1` system dep |
-| Linux aarch64 | ❌ untested | same |
-| Windows | ❌ untested | needs WebView2 runtime |
+| macOS aarch64 | ✅ tested, released | primary target |
+| macOS x86_64 | ✅ built, untested on real hardware | |
+| Linux x86_64 | ❌ not in `dist-workspace.toml` | blocked on: validating overlay behaviour, webkit2gtk-4.1 runtime dep |
+| Linux aarch64 | ❌ not in `dist-workspace.toml` | same |
+| Windows x86_64 | ❌ not in `dist-workspace.toml` | blocked on: WebView2 runtime, transparent borderless + click-through semantics |
 
-Windows and Linux support are not blockers for v0.1.x. They need:
-- Testing the overlay window attributes (transparent + always-on-top + skip-taskbar)
-- Platform-specific autostart (systemd user unit on Linux, Task Scheduler on Windows)
-- Additional CI build targets in cargo-dist config
+To add Linux / Windows:
+
+1. Add target(s) to `dist-workspace.toml` `targets = [...]`
+2. Add `powershell` and/or `msi` to `installers`
+3. Actually test that the overlay window renders correctly and follows spaces-equivalents (workspaces on Linux / virtual desktops on Windows)
+4. Address platform-specific autostart (systemd user unit / Task Scheduler)
+
+---
+
+## Version bump checklist (automated)
+
+`cargo xtask bump <level>` handles all of:
+
+- [x] `Cargo.toml` — `workspace.package.version`
+- [x] `src-tauri/tauri.conf.json` — `version`
+- [x] `src-tauri/Cargo.toml` — inherits via `version.workspace = true`, no change needed
+- [x] `Cargo.lock` — refreshed via `cargo update --workspace`
+
+Manual today, script worthy later:
+
+- [ ] `CHANGELOG.md` entry (file doesn't exist yet)
+
+---
+
+## Sticker pack & binary size
+
+Binary includes the bundled sticker pack as a zstd-compressed tarball
+generated by `build.rs`:
+
+```
+7 MB code + 16 MB compressed stickers = ~22 MB release binary
+```
+
+At daemon startup, `assets::ensure_unpacked` materialises the pack into
+the user's config dir if it's missing. A `.xbark-pack-version` marker
+tracks the bundled fingerprint so updates re-unpack automatically.
+
+If you want to ship without the bundle (dev builds, alt distributions),
+delete `stickers/` before `cargo build` — `build.rs` handles that path
+gracefully.
 
 ---
 
