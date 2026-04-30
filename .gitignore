@@ -1,0 +1,21 @@
+# Rust
+/target
+**/*.rs.bk
+# Cargo.lock IS committed (binary crate)
+
+# Tauri generated
+src-tauri/gen/
+
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Logs
+*.log
+
+# Node (not used but future-proof)
+node_modules/

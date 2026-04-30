@@ -1,0 +1,29 @@
+# xBark configuration
+# Copy to ~/.config/xbark/config.toml and edit as needed.
+# All fields are optional — defaults shown.
+
+# Where to look for sticker files + _meta.json.
+# Leave unset to use the bundled sticker pack.
+# sticker_dir = "/Users/me/my-stickers"
+
+# Default display time per sticker (seconds)
+duration = 2.0
+
+# Default size in pixels (square)
+size = 256
+
+# Default anchor position:
+#   bottom-right | bottom-left | top-right | top-left | center | random
+position = "bottom-right"
+
+# Max stickers visible simultaneously (older ones get evicted)
+max_visible = 5
+
+# Gap between stacked stickers (pixels)
+gap = 12
+
+# Margin from screen edge (pixels)
+margin = 32
+
+# HTTP server port. 0 = random (port file written to ~/.config/xbark/xbark.port)
+port = 0
